@@ -1,0 +1,97 @@
+/*
+Les flexbox permettent de créer des mises en page flexibles et adaptatives.
+Ils fonctionnent sur un axe principal (horizontal ou vertical). 
+Ils ont été concu pour travailler des petits éléments dans un conteneur.
+Ils sont très utiles pour créer des mises en page responsives et fluides.
+ 
+
+✅ display : Définit un conteneur flex.
+    - flex        : Active le mode flexbox. 
+    - inline-flex : Conteneur flex affiché en ligne.
+
+✅ flex-direction : Définit l'orientation des éléments.
+    - row            : Horizontal, de gauche à droite (par défaut).
+    - row-reverse    : Horizontal, de droite à gauche.
+    - column         : Vertical, de haut en bas.
+    - column-reverse : Vertical, de bas en haut.
+
+✅ flex-wrap : Contrôle si les éléments débordent ou s'enroulent.
+    - nowrap        : Tous les éléments sur une seule ligne (par défaut).
+    - wrap          : Les éléments s'enroulent sur plusieurs lignes.
+    - wrap-reverse  : Les éléments s'enroulent en sens inverse.
+
+✅ flex-flow : Raccourci pour `flex-direction` et `flex-wrap`.
+    - Forme : flex-flow: <direction> <wrap>;
+      Exemple : flex-flow: row wrap; 
+
+✅ justify-content : Aligne les éléments sur l'axe principal. (horizontal).
+    - flex-start    : Alignés au début (par défaut).
+    - flex-end      : Alignés à la fin.
+    - center        : Alignés au centre.
+    - space-between : Espaces égaux entre les éléments.
+    - space-around  : Espaces égaux autour des éléments.
+    - space-evenly  : Espaces uniformes entre et autour des éléments. 
+
+✅ align-items : Aligne les éléments sur l'axe transversal. (vertical).
+    - stretch     : Étire les éléments (par défaut).
+    - flex-start  : Alignés en haut.
+    - flex-end    : Alignés en bas.
+    - center      : Alignés au centre.
+    - baseline    : Alignés sur la ligne de base.
+
+✅ order : Change l'ordre d'affichage des éléments.
+    - <int> : Plus la valeur est basse, plus l'élément est prioritaire.
+
+✅ flex-grow : Définit la capacité d'un élément à croître.
+    - <int> : Par exemple, 1 pour occuper l'espace disponible.
+
+✅ flex-shrink : Définit la capacité d'un élément à rétrécir.
+    - <int> : Par exemple, 1 pour s'adapter à l'espace réduit.
+
+✅ flex-basis : Définit la taille de base d'un élément.
+    - <length> : Par exemple, 100px pour une taille fixe.
+    - auto     : Taille basée sur le contenu (par défaut).
+
+✅ flex : Raccourci pour grow, shrink et basis.
+    - auto                  : Équivalent à 1 1 auto.
+    - <grow> <shrink> <basis> : Par exemple, flex: 1 1 100px.
+
+✅ align-self : Aligne un élément individuellement sur l'axe transversal.
+    - auto        : Utilise l'alignement par défaut.
+    - flex-start  : Aligné en haut.
+    - flex-end    : Aligné en bas.
+    - center      : Aligné au centre.
+    - baseline    : Aligné sur la ligne de base.
+    - stretch     : Étire l'élément (par défaut).
+
+✅ column-gap : Définit l'espace entre les colonnes.
+    - <length> : Par exemple, 10px pour un espace de 10 pixels.
+
+✅ row-gap : Définit l'espace entre les lignes.
+    - <length> : Par exemple, 10px pour un espace de 10 pixels.
+
+✅ gap : Raccourci pour 'column-gap' et 'row-gap'.
+    - Forme : gap: <row-gap> <column-gap>;
+    - Exemple : gap: 10px 20px;
+
+*/
+
+body{
+    background-color: #EEE;
+    margin: auto;
+    width: 100%;
+}
+.container{
+    display: flex;
+    background-color: #69b7ebee;
+    height: 100px;
+    flex-wrap: wrap;
+    align-items:flex-start ;
+}
+.con-item{
+    background-color: #f05b5b;
+    border : 1px solid #000;
+}
+
+.obj1{align-self: center;}
+.obj2{align-self: flex-end;}

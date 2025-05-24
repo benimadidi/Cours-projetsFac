@@ -1,0 +1,78 @@
+/*
+✅ Afficher une image en responsive :
+    - img{
+        max-width: 100%;
+        height: auto;
+    }
+
+✅ @media : Permet d'appliquer des styles spécifiques selon la taille ou les caractéristiques de l'écran.
+    - Forme : @media (condition) {styles}
+    - Condition : Peut être une largeur d'écran, une orientation, etc.
+        Sont souvent :
+            - all : Applique les styles à tous les appareils.
+            - screen : Applique les styles uniquement aux écrans (ex: ordinateurs, tablettes, smartphones).
+            - speech : Applique les styles aux appareils de synthèse vocale.
+            - print : Applique les styles uniquement lors de l'impression.
+            - width : Applique les styles si la largeur de l'écran est égale à la valeur spécifiée.
+            - max-width : Applique les styles si la largeur de l'écran est inférieure ou égale à la valeur spécifiée.
+            - min-width : Applique les styles si la largeur de l'écran est supérieure ou égale à la valeur spécifiée.
+            - orientation : Applique les styles selon l'orientation de l'écran (portrait ou paysage).
+        Operateur   : and, or, not, only(pour cibler un type d'appareil spécifique).
+    - Exemple :
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue;  
+            }
+        }
+        
+    - Les points de rupture :
+        - 320px : Smartphones en mode portrait.
+        - 480px : Smartphones en mode paysage.
+        - 768px : Tablettes en mode portrait.
+        - 1024px : Tablettes en mode paysage.
+        - 1280px : Ordinateurs portables.
+        - 1440px : Ordinateurs de bureau.
+        - 1920px : Écrans haute définition.
+*/
+
+body{
+    background-color: #EEE;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto minmax(150px, 300px);
+    grid-template-areas: "entete entete"
+                         "principal barre"
+                         "pied pied";
+}
+
+header{grid-area: entete;}
+section,aside{padding: 20px;}
+section{
+    grid-area: principal;
+    background-color: #DDD;
+} 
+aside{
+    grid-area: barre;
+    background-color: #AAA;
+}
+
+footer{grid-area: pied;}
+
+
+@media(max-width: 800px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas: "entete"
+                             "principal"
+                             "barre"
+                             "pied";
+    }
+}
+
+

@@ -1,0 +1,80 @@
+/*
+✅ color : Permet de changer la couleur du texte.
+    - Nom de couleur : ex : red, blue, darkslateblue. 
+    - Code hexadécimal : ex : #FF0000 pour le rouge. 
+    - Code RGB : ex : rgb(255, 0, 0) pour le rouge.
+    - Code RGBA : ex : rgba(255, 0, 0, 0.5) pour le rouge avec 50% d'opacité.
+    - Code HSL : ex : hsl(0, 100%, 50%) pour le rouge.
+    - inherit : La couleur herite de son parent.
+
+✅ background-color : Permet de changer la couleur de fond d'un élément.
+    - Fonctionne comme `color`.
+    - Peut être appliqué à n'importe quel élément HTML.
+
+✅ background-image : Permet d'ajouter une image de fond à un élément.
+    - Forme : url('chemin/vers/image').
+      Exemple : background-image: url('image.jpg').
+
+✅ background-position : Définit la position de l'image de fond.
+    - Valeurs : top, bottom, left, right, center.
+    - Coordonnées spécifiques : px, %, etc.
+      Exemple : background-position: center.
+
+✅ background-size : Définit la taille de l'image de fond.
+    - auto : Taille par défaut de l'image.
+    - cover : L'image couvre entièrement l'élément (peut être coupée).
+    - contain : L'image est redimensionnée pour s'adapter sans être coupée.
+    - Valeurs spécifiques : px, %, etc.
+      Exemple : background-size: cover.
+
+✅ background-repeat : Définit si l'image de fond doit se répéter.
+    - no-repeat : L'image ne se répète pas.
+    - repeat : L'image se répète horizontalement et verticalement.
+    - repeat-x : L'image se répète horizontalement seulement.
+    - repeat-y : L'image se répète verticalement seulement.
+      Exemple : background-repeat: no-repeat.
+
+✅ background-attachment : Définit si l'image de fond défile avec le contenu.
+    - scroll : L'image défile avec le contenu (par défaut).
+    - fixed : L'image reste fixe lorsque le contenu défile.
+    - local : L'image défile avec le contenu de l'élément.
+      Exemple : background-attachment: fixed.
+
+✅ background-origin : Définit la zone de référence pour la position de l'image.
+    - padding-box : Par rapport à la zone de remplissage (padding).
+    - border-box : Par rapport à la bordure de l'élément.
+    - content-box : Par rapport à la zone de contenu.
+      Exemple : background-origin: padding-box.
+
+✅ background-clip : Définit la zone où l'image de fond est visible.
+    - border-box : Visible dans la zone de bordure.
+    - padding-box : Visible dans la zone de remplissage.
+    - content-box : Visible dans la zone de contenu.
+      Exemple : background-clip: content-box.
+
+✅ background : Permet de définir plusieurs propriétés de fond en une seule déclaration.
+    - Forme : background: <image> <repeat> <position> / <size>;
+      Exemple : background: url('image.jpg') no-repeat center center / cover.
+    ⚠️ Si utilisée, les autres propriétés de fond (comme background-color) ne peuvent pas être définies séparément.
+
+✅ accent-color : Permet de personnaliser la couleur des elements d'interface utilisateur.
+    Ex : les boutons, les champs de saisie, etc.
+
+✅ backdrop-filter : Permet de faire des effets de filtre sur le fond d'un élément.
+    blur() : Applique un effet de flou.
+    brightness() : Modifie la luminosite du fond.
+    contrast() : Modifie la contraste du fond.
+    grayscale() : Convertit le fond en gris.
+    hue-rotate() : Fait pivoter la couleur du fond.
+    invert() : Inverse la couleur du fond.
+
+*/
+
+body{
+    color: #fff;
+    background-image: url(bg4.jpeg);
+    background-size: auto;
+    margin: auto;
+    width: 1000px;
+
+}

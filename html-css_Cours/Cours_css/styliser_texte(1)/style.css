@@ -1,0 +1,42 @@
+/* 
+✅ font-style : Définit le style de la police.
+    - normal  : Style normal (par défaut).
+    - italic  : Texte en italique.
+    - oblique : Texte incliné.
+
+✅ font-variant : Contrôle l'affichage des petites capitales.
+    - normal     : Affichage normal (par défaut).
+    - small-caps : Transforme les lettres minuscules en petites capitales.
+
+✅ font-weight : Définit l'épaisseur des caractères.
+    - normal             : Épaisseur normale (par défaut).
+    - bold               : Texte en gras.
+    - Valeurs numériques : Plus précises (100 à 900).
+
+✅ font-size : Définit la taille de la police.
+    - xx-small, x-small, small : Très petit à petit. 
+    - medium                  : Taille moyenne (par défaut).
+    - large, x-large, xx-large : Grand à très grand.
+    - pixels                  : Taille spécifique (ex : 16px).
+    - pourcentage             : Taille relative à l'élément parent (ex : 100%).
+    - rem/em                  : Taille relative (1rem = 16px, 1em = 100%).
+
+✅ line-height : Contrôle l'espacement entre les lignes.
+    - normal      : Espacement normal (par défaut).
+    - pixels      : Taille spécifique (ex : 20px).
+    - pourcentage : Taille relative à l'élément parent (ex : 150%).
+    - rem/em      : Taille relative (ex : 1.5em).
+
+✅ font-family : Définit la police de caractères.
+    - Noms sans espaces : Sans guillemets (ex : Arial).
+    - Noms avec espaces : Avec guillemets (ex : "Times New Roman").
+    - Polices par défaut : Ajoutez des polices alternatives séparées par des virgules.
+
+✅ font : Méta-propriété combinant plusieurs propriétés.
+    - Forme : font: <font-style> <font-variant> <font-weight> <font-size>/<line-height> <font-family>;
+      Exemple : font: italic small-caps bold 16px/1.5 "Times New Roman", serif;
+*/
+
+p.modif-p {
+    font: normal normal normal 20px/1em cursive, Courier, monospace;
+}

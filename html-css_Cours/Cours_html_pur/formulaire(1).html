@@ -1,0 +1,70 @@
+<!-- 
+Les formulaires sont des éléments HTML qui permettent de recueillir des données auprès des utilisateurs.
+- Ils sont essentiels pour créer des applications web interactives et dynamiques. 
+- Les formulaires peuvent contenir différents types de champs, tels que des zones de texte, des cases à cocher, 
+    des boutons radio, des listes déroulantes, etc. 
+- Ils permettent également d'envoyer des données à un serveur pour traitement.
+
+<form></form>       : est utilisé pour créer des formulaires
+    enctype=""      : Spécifie comment les données du formulaire sont encodées
+        multipart/form-data : Lorsque qu'un formulaire contient un champ de fichier (file)
+    method=""       : la méthode d'envoi des données
+        get         : ajoute les éléments du formulaire dans l'URL de manière visible,
+                      avec une taille limitée et une sécurité faible
+        post        : envoie les éléments du formulaire de manière invisible,
+                      avec une taille illimitée et une meilleure sécurité
+    action=""       : définit la destination où envoyer le formulaire 
+                      (ex : result.php). Par défaut, il se redirige sur lui-même.
+    name=""         : nomme un formulaire
+    target=""       : définit où afficher la réponse après l'envoi du formulaire
+        _self       : charge la réponse dans la même page 
+        _blank      : charge la réponse dans un nouvel onglet
+
+    autocomplete    : contrôle si le navigateur doit suggérer et remplir automatiquement
+                      les valeurs précédemment saisies dans un formulaire
+ 
+<input>             : permet de mettre un champ de saisie dans le formulaire
+    name=""         : toujours mettre un nom pour la récupération des données
+    id=""           : Pour lier un label a son identifiant
+    placeholder=""  : une petite description pour guider l'utilisateur
+    type=""         : définit le type de champ
+        submit      : sert à envoyer le formulaire (crée un bouton)
+            value="" : pour nommer le bouton 
+        reset       : sert à vider le formulaire (crée un bouton)
+            value="" : pour nommer le bouton 
+        email       : pour saisir une adresse email
+        file        : pour intri=oduire un fichier
+        password    : pour un champ de mot de passe
+        checkbox    : pour une case à cocher
+        radio       : pour un bouton radio
+            (!) pour deux radios, mettre le meme nom dans l'attribut 'name'
+        number      : pour saisir un nombre
+        date        : pour sélectionner une date
+    value=""        : sert a envoyer une valeur spécifique (Ex : "m") quand le formulaire est envoyé
+    size=""         : sert à modifier la taille du champ
+    required        : rend un champ obligatoire
+    accept=""       : pour selectionner des fichiers precis
+        Ex : accept=".docx"
+        image/*     : pour selectionner toutes les images
+<label></label>     : est utilisée pour associer un texte descriptif à un champ de formulaire
+    for=""          : sert à lier le label à un champ de formulaire spécifique 
+
+<textarea></textarea> : permet de saisir un texte long.
+<select></select>     : permet de créer une liste déroulante.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Formulaires (1/2)</title>
+    </head>
+    <body>
+        <form method="post" action="">
+          Nom : <input type="text" name="username" placeholder="Entrez votre nom..." required> <br>
+          <input type="reset"  value="Effacer" >
+          <input type="submit"  value="Se connecter" >
+        </form>
+    </body>
+</html>

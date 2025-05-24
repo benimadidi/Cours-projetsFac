@@ -1,0 +1,90 @@
+/*  
+✅ text-decoration : Ajoute ou modifie des décorations sur le texte.
+    - Forme : text-decoration: <ligne> <couleur> <style>;
+        ligne :
+            underline    : Souligne le texte.
+            overline     : Ligne au-dessus du texte.
+            line-through : Barre le texte.
+        couleur :
+            Couleur de la ligne (ex : red, #FF0000).
+        style (optionnel) :
+            solid        : Ligne pleine (par défaut).
+            double       : Double ligne.
+            dotted       : Ligne en pointillés.
+            dashed       : Ligne en tirets.
+            wavy         : Ligne ondulée.
+      Exemple : text-decoration: underline red double;
+
+✅ text-shadow : Ajoute une ombre au texte.
+    - Forme : text-shadow: <décalageX> <décalageY> <flou> <couleur>;
+        décalageX : Déplacement horizontal (ex : 2px).
+        décalageY : Déplacement vertical (ex : 2px).
+        flou      : Intensité du flou (optionnel, ex : 5px).
+        couleur   : Couleur de l'ombre (ex : #b64b1bdd).
+      Exemple : text-shadow: 2px 2px 5px #b64b1bdd;
+
+✅ text-align : Aligne le texte dans un élément.
+    - left    : Aligne à gauche (par défaut).
+    - right   : Aligne à droite.
+    - center  : Centre le texte horizontalement.
+    - justify : Justifie le texte (espacement ajusté).
+    - start   : Aligne au début (selon la direction du texte).
+    - end     : Aligne à la fin (selon la direction du texte).
+
+✅ text-align-last : Définit l'alignement de la dernière ligne.
+    - auto    : Alignement par défaut.
+    - left    : Aligne à gauche.
+    - right   : Aligne à droite.
+    - center  : Centre horizontalement.
+    - justify : Justifie la dernière ligne.
+    - start   : Aligne au début.
+    - end     : Aligne à la fin.
+
+✅ letter-spacing : Gère l'espacement entre les lettres.
+    - normal (par défaut).
+    - Valeurs spécifiques : px, %, rem, em (ex : 2px).
+
+✅ word-spacing : Gère l'espacement entre les mots.
+    - normal (par défaut).
+    - Valeurs spécifiques : px, %, rem, em (ex : 5px).
+
+✅ white-space : Contrôle les espaces et les retours à la ligne.
+    - normal    : Comportement par défaut.
+    - nowrap    : Empêche les retours à la ligne.
+    - pre       : Conserve les espaces et sauts de ligne (comme `<pre>`).
+    - pre-wrap  : Conserve les espaces et sauts de ligne, mais autorise les retours automatiques.
+    - pre-line  : Supprime les espaces inutiles, mais conserve les sauts de ligne.
+
+✅ word-break : Contrôle la façon dont les mots sont coupés.
+    - normal    : Comportement par défaut.
+    - break-all : Coupe les mots à n’importe quel caractère.
+
+✅ direction : Définit le sens d’écriture.
+    - ltr : De gauche à droite (par défaut).
+    - rtl : De droite à gauche.
+
+✅ vertical-align : Aligne un élément en ligne verticalement.
+    - baseline    : Aligné sur la ligne de base (par défaut).
+    - top         : Aligné en haut.
+    - middle      : Aligné au centre.
+    - bottom      : Aligné en bas.
+    - text-top    : Aligné avec le haut du texte.
+    - text-bottom : Aligné avec le bas du texte.
+    - sub         : Indice (ex : x₂).
+    - super       : Exposant (ex : x²).
+    - Valeurs spécifiques : px ou % (ex : 10px).
+    ⚠️ Ne fonctionne que sur les éléments en ligne (inline ou inline-block).
+
+
+*/
+
+/* Pour la comprehension de text-overflow */
+body{
+    margin: auto;
+    width: 500px;
+}
+
+.modif-p{
+    text-align: center;
+    text-align-last: left;
+}

@@ -1,0 +1,34 @@
+/*
+
+✅ background : Pour définir des degrés de couleur et d'opacité.
+    - linear-gradient : Crée un dégradé linéaire.
+        - Syntaxe : linear-gradient(direction, couleur1, couleur2, ...);
+            - direction : Peut être un angle (ex. 90deg) ou des mots-clés (ex. to right).
+                - to right : De gauche à droite.
+                - to left : De droite à gauche.
+                - to top : De bas en haut.
+                - to bottom : De haut en bas.
+                - to top right : En diagonale vers le coin supérieur droit.
+                - to top left : En diagonale vers le coin supérieur gauche.
+                - to bottom right : En diagonale vers le coin inférieur droit.
+                - to bottom left : En diagonale vers le coin inférieur gauche.
+            - couleurs : Liste des couleurs utilisées dans le dégradé.
+    - radial-gradient : Crée un dégradé radiaux.
+        - Syntaxe : radial-gradient(form, couleur1 %, couleur2 %, ...);
+            - form : Peut être circle (cercle) ou ellipse (ellipse).
+            - couleurs : Liste des couleurs utilisées dans le dégradé.
+
+*/
+
+.div1{
+    float: left;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(closest-side at 20% 40%, blue, purple, red);
+}
+.div2{
+    float: right;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(farthest-side at 20% 40%, blue, purple, red);
+}

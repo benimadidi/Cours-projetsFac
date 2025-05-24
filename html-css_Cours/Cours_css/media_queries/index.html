@@ -1,0 +1,70 @@
+<!--
+Une meta-donnée est une balise HTML qui permet de fournir des informations supplémentaires au navigateur ou au moteur de recherche.
+<meta>        : Definit des meta-données sur le document HTML.
+    - name    : Nom de la meta-donnée.
+        "viewport" : Permet de définir la zone d'affichage de la page web.
+    - content        : Définit la valeur de la valeur d'affichage.
+        "width=device-width" : Définit la largeur de la zone d'affichage à la largeur de l'écran de l'appareil.
+        "initial-scale=1.0" : Définit le niveau de zoom initial à 1.0 (100%).
+
+<link>         : Définit la relation entre le document HTML et une ressource externe.
+    - rel      : Définit la relation entre le document HTML et la ressource externe.
+        "stylesheet" : Indique que la ressource est une feuille de style CSS.
+    - href     : Définit l'URL de la ressource externe.
+        "style.css" : URL de la feuille de style CSS.
+        
+-->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Les media queries</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="container">
+        <header class="item">
+            <h1>Le kebabiste</h1>
+        </header>
+
+        <section class="item">
+            <h2>Ceci est un titre d'article</h2>
+
+            <p>Le chat domestique (Felis silvestris catus) est la sous-espècece issue de la domestication du chat savuage, mammifère carnivore de la famille des félidés. </p>
+
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>etc.</li>
+            </ul>
+
+            <p>Il est l'un des principaux animaux de companie et compte aujourd'hui une cinquantaine  de races différentes reconnues par les instances de certification. Dans de très nombreux pays, le chat entre dans le cadre de la légalisation sur les carnivores domestiques à l'instar du chien furet. Essentiellement territorial, le chat est un prédateur de petites proies comme les rongeurs ou les oiseaux. Les chats ont diverses vocalisations dont le ronronnements, les miaulements, les feulements ou les grognements, bine qu'ils communiquent principalement par des positions faciales et corporelles et des phéromones. </p>
+
+            <img src="ciel-etoile.jpg" alt="Magnifique ciel etoilé">
+
+            <p>Il est l'un des principaux animaux de companie et compte aujourd'hui une cinquantaine  de races différentes reconnues par les instances de certification. Dans de très nombreux pays, le chat entre dans le cadre de la légalisation sur les carnivores domestiques à l'instar du chien furet. Essentiellement territorial, le chat est un prédateur de petites proies comme les rongeurs ou les oiseaux. Les chats ont diverses vocalisations dont le ronronnements, les miaulements, les feulements ou les grognements, bine qu'ils communiquent principalement par des positions faciales et corporelles et des phéromones. </p>
+        </section>
+
+        <aside class="item">
+            <h2>Recherche</h2>
+
+            <form method="post" action="">
+                <input type="search" placeholder="Rechercher...">
+                <input type="submit" value="OK">
+            </form>
+
+            <h2>Liens</h2>
+
+            <p><a href="#">&Acirc; propos</a><br>
+                <a href="#">Mentions légales</a>
+            </p>
+        </aside>
+
+        <footer class="item">
+           <p> copiright &copy; 2025 - Toutes sauces reservées </p>
+        </footer>
+        
+    </body>
+</html>

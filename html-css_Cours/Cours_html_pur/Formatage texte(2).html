@@ -1,0 +1,55 @@
+<!--   
+<abbr></abbr>         : Permet de créer des abréviations.
+    title=""          : Fournit une description de l'abréviation.
+    Exemple : <abbr title="HyperText Markup Language">HTML</abbr>
+<address></address>   : Permet de créer des adresses.
+    Exemple : 
+    <address> 
+        123 Rue Exemple, <br>
+        75000 Paris, France <br>
+        <a href="mailto:contact@example.com">contact@example.com</a>
+    </address>
+<bdi></bdi>           : Permet de gérer la direction des textes dans des contextes multilingues.
+    dir=""            : Permet de forcer le sens :
+        "rtl" [right to left] (de droite à gauche).
+        "ltr" [left to right] (de gauche à droite).
+    Exemple : <bdi dir="rtl">Texte en arabe</bdi>
+<bdo dir=""></bdo>    : Imposer le sens du texte.
+    "rtl" [right to left] (met le texte à l'envers).
+    "ltr" [left to right] (le sens normal).
+    Exemple : <bdo dir="rtl">Texte inversé</bdo>
+<dfn></dfn>           : Principalement utilisé pour les définitions de mots (met le mot en italique).
+    Exemple : <dfn>HTML</dfn> est un langage de balisage.
+<dl></dl>             : Permet de définir des listes de mots.
+    <dt></dt> [definition term] : Les mots à définir.
+    <dd></dd> [definition description] : Les définitions des mots.
+    Exemple : 
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+<progress></progress> : Permet de créer une barre de progression grâce à ses attributs.
+    value="entier"    : L'état actuel.
+    max="entier"      : Le maximum de la barre.
+    Exemple : <progress value="50" max="100">50%</progress>
+<sub></sub>           : Pour les indices.
+    Exemple : Formule de l'oxygène : CO<sub>2</sub>
+<sup></sup>           : Pour les exposants.
+    Exemple : Superficie : 100m<sup>2</sup>
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Formatage de texte </title>
+    </head>
+    <body>
+        <p> Formule de l'oxygeine : CO<sub>2</sub> <br>
+            Superficie : 100m<sup>2</sup>
+        </p> 
+
+    </body>
+</html>

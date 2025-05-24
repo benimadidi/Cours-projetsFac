@@ -1,0 +1,111 @@
+/*
+✅ border : est une meta-propriété qui permet de définir la bordure d'un élément.
+    - Forme : <border-width> <border-style> <border-color>
+    - border-width : définit l'epaisseur de la bordure.
+    - border-style : définit le style de la bordure.     
+        none     : pas de bordure
+        solid    : bordure pleine
+        dotted   : bordure en pointillés
+        dashed   : bordure en tirets
+        double   : double bordure
+        groove   : bordure en relief
+        ridge    : bordure en creux
+        inset    : bordure enfoncée
+        outset   : bordure saillante
+    - border-color : définit la couleur de la bordure.
+        on peut utiliser des noms de couleurs, des codes hexadécimaux ou des valeurs RGB.
+    
+    - border-top : définit la bordure supérieure de l'élément.
+        border-top-width : définit la largeur de la bordure supérieure.
+        border-top-style : définit le style de la bordure supérieure.
+        border-top-color : définit la couleur de la bordure supérieure.
+    - border-left : définit la bordure gauche de l'élément.
+        border-left-width : définit la largeur de la bordure gauche.
+        border-left-style : définit le style de la bordure gauche.
+        border-left-color : définit la couleur de la bordure gauche.
+
+✅ border-image : permet de définir une image de bordure.
+    - Forme : border-image: <source> <slice> <width> <outset> <repeat>;
+        <source> : l'image à utiliser comme bordure.
+        <slice>  : définit la zone de l'image à utiliser pour la bordure.
+        <width>  : définit la largeur de la bordure.
+        <outset> : définit le décalage de la bordure.
+        <repeat> : définit comment l'image doit être répétée.
+            stretch : étire l'image pour remplir la zone de bordure.
+            repeat  : répète l'image pour remplir la zone de bordure.
+            round   : répète l'image pour remplir la zone de bordure en arrondissant les bords.
+            space   : répète l'image pour remplir la zone de bordure en laissant des espaces entre les images.
+
+    (!) On peut directement créer des bordures via le site : https://border-image.com
+
+✅ border-radius : permet de définir les coins arrondis d'un élément.
+    - Forme : <border-top-left-radius> <border-top-right-radius> <border-bottom-right-radius> <border-bottom-left-radius>
+        border-top-left-radius : définit le coin supérieur gauche de l'élément.
+        border-top-right-radius : définit le coin supérieur droit de l'élément.
+        border-bottom-right-radius : définit le coin inférieur droit de l'élément.
+        border-bottom-left-radius : définit le coin inférieur gauche de l'élément.
+
+✅ border-collapse : permet de fusionner les bordures des cellules d'un tableau.
+    - collapse : fusionne les bordures des cellules.
+    - separate : ne fusionne pas les bordures des cellules.
+    (!) Utile pour les tableaux.
+✅ border-spacing : permet de définir l'espacement entre les cellules d'un tableau.
+    - elle est utilisée pour les tableaux qui n'ont pas de bordure.
+    - Forme : <border-spacing-x> <border-spacing-y>
+        border-spacing-x : définit l'espacement horizontal entre les cellules.
+        border-spacing-y : définit l'espacement vertical entre les cellules.
+    (!) Utile pour les tableaux.
+
+✅ outline : permet de définir une bordure autour d'un élément.
+    elle est utilisée pour les éléments qui n'ont pas de bordure par défaut.
+    elle prend en paramètre 3 propriétés : <outline-width> <outline-style> <outline-color>
+        outline-width : définit la largeur de la bordure.
+        outline-style : définit le style de la bordure.
+        outline-color : définit la couleur de la bordure.
+✅ outline-offset : définit le décalage de la bordure.
+    EX : outline-offset: 10px; // décale la bordure de 10px vers l'extérieur.
+
+✅ box-shadow : permet de créer une ombre portée autour d'un élément.
+    elle prend en paramètre 4 propriétés : <decalage-x> <decalage-y> <etendue> <couleur>
+        decalage-x : décalage horizontal de l'ombre.
+        decalage-y : décalage vertical de l'ombre.
+        etendue     : étendue de l'ombre.
+        couleur     : couleur de l'ombre.
+
+*/
+ 
+html{
+    background-color: #EEE;
+}
+
+body{
+    width: 800px;
+    margin: auto;
+    
+}
+
+#wrapper{
+    background-color: #ffffff;
+    border : 3px solid #e9910d ;
+    box-shadow: 0 0 10px #e9910d;
+    margin-top : 50px ;
+    padding: 5px;
+}
+
+
+
+/* table, td, th{
+    border: 2px solid #000;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+th,td{
+    padding: 10px;
+    text-align: center;
+
+}
+th{
+    font-size: 1.2rem;
+}
+ */

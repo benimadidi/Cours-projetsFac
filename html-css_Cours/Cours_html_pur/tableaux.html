@@ -1,0 +1,59 @@
+<!-- 
+<table></table>           : Balise utilisée pour créer des tableaux.
+    <caption></caption>   : Définit le titre du tableau (utile pour l'accessibilité).
+    <thead></thead>       : Définit l'en-tête du tableau (contient généralement les titres des colonnes).
+    <tbody></tbody>       : Définit le corps du tableau (contient les données principales).
+    <tfoot></tfoot>       : Définit le pied du tableau (souvent utilisé pour des totaux ou des notes).
+
+<tr></tr>                 : Définit une ligne dans le tableau.
+    <td></td>             : Définit une cellule de données dans une ligne.
+        rowspan=""        : Permet à une cellule de s'étendre sur plusieurs lignes.
+        colspan=""        : Permet à une cellule de s'étendre sur plusieurs colonnes.
+    <th></th>             : Définit une cellule d'en-tête (texte en gras et centré par défaut).
+        abbr=""           : Fournit une abréviation pour le contenu de l'en-tête (utile pour les lecteurs d'écran).
+
+<colgroup></colgroup>     : Définit un groupe de colonnes dans un tableau (utile pour appliquer du CSS).
+    <col>                 : Spécifie une colonne ou un groupe de colonnes.
+        class=""          : Applique une classe à une colonne.
+        span=""           : Permet d'appliquer un style à plusieurs colonnes en même temps.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Les tableaux</title>
+
+        <!-- Je comprends rien pour le moment ici -->
+        <style>
+            table{border-collapse: collapse;}
+            th, td{border: 1px solid #000; padding: 5px;}
+        </style>
+        
+    </head>
+    <body>
+        <table>
+            <thead>
+                <caption>Listing des jeux videos</caption>
+                <tr>
+                    <th>Nom du jeu</th>
+                    <th>Genre et type</th>
+                    <th>Prix du jeu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GTA 5</td>
+                    <td>Action- Aventure</td>
+                    <td>59,99$</td>
+                </tr>
+                <tr>
+                    <td>Assassin's creed</td>
+                    <td>Action- Aventure</td>
+                    <td>69,99$</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!--  
+<fieldset></fieldset> : Sert à regrouper plusieurs éléments d’un formulaire dans un ensemble cohérent.
+    form=""           : Relie le champ au formulaire correspondant.
+    disabled          : Désactive tout interaction avec les champs du groupe.
+
+<legend></legend>     : Sert à nommer une section ou un groupe d'éléments dans un formulaire.
+
+<textarea></textarea> : Permet de créer une zone de texte multi-lignes.
+    rows=""           : Spécifie le nombre de lignes visibles par défaut.
+    cols=""           : Spécifie le nombre de colonnes visibles par défaut.
+    minlength=""      : Définit une taille minimale de caractères. 
+    maxlength=""      : Définit une taille maximale de caractères.
+    wrap=""           : Contrôle la façon dont le texte est automatiquement coupé.
+        soft          : Pas de coupure automatique.
+        hard          : Coupure automatique (recommandé pour une meilleure lisibilité).
+
+<select></select>     : Utilisée pour créer un menu déroulant.
+    form=""           : Relie le champ au formulaire correspondant.
+    size=""           : Définit le nombre d'options visibles par défaut.
+    multiple          : Permet de sélectionner plusieurs options (avec la touche Ctrl ou Cmd).
+    <option></option> : Généralement utilisée dans la balise <select> pour définir les différentes options.
+        value=""      : Spécifie la valeur associée à l'option, utile pour récupérer les données.
+
+<optgroup></optgroup> : Sert à regrouper des options dans un menu déroulant.
+    label=""          : Donne un titre ou une catégorie au groupe d'options.
+
+<datalist></datalist> : Sert à définir une liste de choix prédéfinis pour un champ de saisie.
+    id=""             : L'identifiant doit correspondre à l'attribut "list" de l'élément <input>.
+
+<input>               : Permet de créer un champ de saisie dans le formulaire.
+    list=""           : Associe une liste de choix prédéfinis au champ de saisie.
+    
+<button></button>     : Crée un bouton interactif.
+    type=""           : Spécifie le type de bouton.
+        button        : Crée un bouton générique sans action par défaut.
+        submit        : Envoie les données du formulaire.
+        reset         : Réinitialise les champs du formulaire.
+-->
+
+
+<!DOCTYPE html>
+<html lang="fr">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulaires (1/2)</title>
+    </head>
+    <body>
+        <form method="post" id="id_form" action="">
+            <fieldset form="id_form" >
+                <legend>Ma section</legend>
+                Choix du jeu : <input list="choixJeu">
+                <datalist id="choixJeu">
+                    <option value="CS:GO">
+                    <option value="Final Fantasy">
+                </datalist>
+
+                <br><input type="submit" value="Envoyer" name="valid_form">
+            </fieldset>
+        </form>
+    </body>
+</html>

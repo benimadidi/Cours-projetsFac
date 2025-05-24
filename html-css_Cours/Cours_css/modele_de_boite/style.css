@@ -1,0 +1,67 @@
+/* 
+✅ width / height : Définit la largeur ou la hauteur d'un élément.
+    - Valeurs spécifiques : px, em, rem, %, etc.
+    - auto : Taille par défaut de l'élément.
+    - min-width / max-width : Définit la largeur minimale ou maximale.
+    - min-height / max-height : Définit la hauteur minimale ou maximale.
+
+✅ padding : Définit les marges intérieures d'un élément.
+    - padding-top    : Marge intérieure en haut.
+    - padding-right  : Marge intérieure à droite.
+    - padding-bottom : Marge intérieure en bas.
+    - padding-left   : Marge intérieure à gauche.
+    - padding        : Définit les 4 marges intérieures en une seule ligne.
+        Exemple :
+            padding: 10px 20px 30px 40px; // top, right, bottom, left 
+            padding: 10px 20px; // top/bottom, right/left 
+            padding: 10px; // top/right/bottom/left 
+
+✅ margin : Définit les marges extérieures d'un élément.
+    - auto : Centre un élément horizontalement dans son conteneur.
+    - margin-top    : Marge extérieure en haut.
+    - margin-right  : Marge extérieure à droite.
+    - margin-bottom : Marge extérieure en bas.
+    - margin-left   : Marge extérieure à gauche.
+    - margin        : Définit les 4 marges extérieures en une seule ligne.
+        Exemple :
+            margin: 10px 20px 30px 40px; // top, right, bottom, left 
+            margin: 10px 20px; // top/bottom, right/left 
+            margin: 10px; // top/right/bottom/left 
+
+✅ overflow : Gère le débordement du contenu d'un élément.
+    - visible : Le contenu qui dépasse est visible (par défaut).
+    - hidden  : Le contenu qui dépasse est caché (⚠️ contenu inaccessible).
+    - scroll  : Ajoute une barre de défilement si le contenu dépasse.
+    - auto    : Ajoute une barre de défilement si nécessaire.
+    - clip    : Cache le contenu qui dépasse sans barre de défilement.
+    - overflow-x : Gère le débordement horizontal.
+    - overflow-y : Gère le débordement vertical.
+
+✅ overflow-wrap (ou word-wrap) : Contrôle la coupure des mots.
+    - normal     : Coupure normale (par défaut).
+    - break-word : Coupe les mots longs pour éviter le débordement.
+*/
+
+html{
+    background-color: #FFF;
+}
+body,div,p{
+    margin: auto;
+}
+body{
+    background-color: #DDD;
+    width: 800px;
+}
+
+div{
+    background-color: #888;
+    padding: 5px ;
+    width: 600px;
+}
+p{
+    background-color: #c76f6f;
+    width: 400px;
+    padding: 10px;
+    text-align: justify;
+
+}

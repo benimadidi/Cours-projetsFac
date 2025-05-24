@@ -1,0 +1,50 @@
+<!--
+<img>                         : Pour inserer des images 
+    src=""                    : pour mettre le lien vers l'image
+    alt=""                    : sert a fournir un texte alternatif lorque l'image ne peut pas etre chargée (peut aussi rester vide)
+    usemap=""                 : permet a la creation d'une zone cliquable sur une image (ex : usemap="#nom")
+    width=""                  : pour definir une largeur a l'image (pixels)
+        auto                  : gere automatiquement la hauteur en fonction de la hauteur
+    height=""                 : pour definir une hauteur à l'image (pixels)
+        auto                  : gere automatiquement la hauteur en fonction de la largeur
+<figure></figure>             : est utilisée pour encapsuler un contenu visuel
+    <figcaption></figcaption> : pour mettre une description courte de l'image ( ou la source de l'image)
+
+
+       Creer une zone cliquable sur une image 
+  /*----------------------------------------------*/
+<map name="">              : définit une carte d’image avec un nom unique
+                             qui sera referencé dans la balise img avec l'attribut 
+    <area>                     : crée une zone cliquable sur l’image
+        shape=""               : définit la forme de la zone cliquable
+            rect               : définit une zone rectangulaire (x1,y1 x2,y2)
+            circle             : définit une zone circulaire (x, y, rayon)
+            poly               : définit une zone polygonale (x1, y1, x2, y2, ..., xn, yn)
+        coords=""              : définit les coordonnées de la zone cliquable
+        href=""                : spécifie le lien vers lequel la zone redirige
+        alt=""                 : texte alternatif pour l’accessibilité
+        target=""              : définit où ouvrir le lien
+            _self              : ouvre le lien dans la même page (par défaut)
+            _blank             : ouvre le lien dans un nouvel onglet
+
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Images</title>
+    </head>
+    <body>
+        <h1>Images et figures</h1>
+
+        <img class="image-carte" usemap="#colorpalet" src="carte.png" alt="Palette de couleurs" width="500" height="500">
+
+        <map name="colorpalet">
+            <area shape="rect" coords="0,250 250,500 " href="carte_bleu.png" alt="">
+            <area shape="rect" coords="0,0 250,250" href="capibara.jpg" alt="">
+        </map>
+       
+    </body>
+</html>

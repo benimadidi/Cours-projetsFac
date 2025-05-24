@@ -1,0 +1,96 @@
+/*
+✅ Partie sur l'affichage d'un élément.
+    -display         : Définit le type d'affichage d'un élément.
+        none         : L'élément n'est pas affiché.
+        block        : L'élément est affiché sous forme de bloc (par défaut).
+        inline       : L'élément est affiché en ligne (pas de largeur/hauteur définissable).
+        inline-block : Affiché en ligne, mais avec largeur/hauteur définissable.
+        inline-table : Affiché sous forme de tableau en ligne.
+        list-item    : Affiché sous forme de liste.
+        flex         : Active le mode flexbox (voir dossier flexbox). 
+        grid         : Active le mode grid (voir dossier grid).
+
+    -visibility      : Définit la visibilité d'un élément.
+        visible      : L'élément est visible (par défaut).
+        hidden       : L'élément est caché, mais occupe encore de l'espace.
+        collapse     : L'élément est caché et n'occupe plus d'espace (pour tableaux).
+ 
+    -opacity         : Définit la transparence d'un élément.
+        0            : L'élément est complètement transparent.
+        1            : L'élément est complètement opaque (par défaut).
+    
+    -scroll-behavior : Permet de choisir le comportement du scroll.
+        auto         : Défilement instantané (par défaut).
+        smooth       : Défilement fluide et animé.
+
+✅ Partie sur le positionnement d'un élément.
+    -position        : Définit comment un élément est positionné.
+        static       : Position par défaut, selon le flux normal.
+        relative     : Positionné par rapport à sa position d'origine.
+        absolute     : Positionné par rapport au conteneur positionné le plus proche.
+        fixed        : Positionné par rapport à la fenêtre (reste fixe au défilement).
+        sticky       : Mélange de relative et fixed (fixe au défilement sous conditions).
+
+        Propriétés associées :
+            top      : Distance par rapport au haut du conteneur.
+            right    : Distance par rapport à la droite du conteneur.
+            bottom   : Distance par rapport au bas du conteneur.
+            left     : Distance par rapport à la gauche du conteneur.
+            z-index  : Ordre d'empilement (plus la valeur est élevée, plus l'élément est au-dessus).
+
+    -float           : Permet de faire flotter un élément.
+        left         : L'élément flotte à gauche.
+        right        : L'élément flotte à droite.
+        none         : L'élément ne flotte pas (par défaut).
+
+    -clear           : Annule l'effet de flottement sur un élément.
+        left         : Déplacé sous les éléments flottants à gauche.
+        right        : Déplacé sous les éléments flottants à droite.
+        both         : Déplacé sous tous les éléments flottants.
+        none         : Aucun effet (par défaut).
+
+        💡 Utilisation : Souvent utilisée pour éviter que des éléments soient affectés par des flottants.
+
+    - z-index : Ordre d'empilement (plus la valeur est élevée, plus l'élément est au-dessus).
+
+
+*/
+
+*{
+    margin :0;
+    outline: none;
+    padding: 0;
+}
+
+body{
+    background-color: #EFEFEF;
+    margin: auto;
+    width: 1000px;
+}
+
+header{
+    background-color:#d1a0a0 ;
+    margin: auto;
+    width: 1000px;
+    height: 80px;
+}
+section{
+    background-color:#86af9b ;
+    margin: auto;
+    width: 800px;
+    float: left;
+}
+aside{
+    background-color:#d4ac9a ;
+    margin: auto;
+    width: 200px;
+    float: right;
+}
+
+footer{
+    clear: both;
+    background-color:#8aa1ec ;
+    margin: auto;
+    width: 1000px;
+    height: 30px;
+}

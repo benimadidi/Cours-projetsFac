@@ -1,0 +1,39 @@
+<!--
+les listes sont des éléments de base en HTML qui permettent de structurer le contenu d'une page web.
+Il existe deux types de listes principales : les listes non ordonnées (ul) et les listes ordonnées (ol).
+    Les listes non ordonnées sont généralement utilisées pour des éléments qui n'ont pas d'ordre spécifique, 
+    tandis que les listes ordonnées sont utilisées pour des éléments qui doivent être présentés dans un ordre particulier.
+
+<ul></ul>    : utiliser pour creer une liste non ordonnée
+<ol></ol>    : utiliser pour creer une liste ordonnée (avec des étapes)
+    reversed : pour renverser les etapes
+    start="" : pour definir le numéro de départ
+    type=""  : pour definir le type de numérotation
+<li></li>    : pour placer des elements à utiliser (en mettant une puce par défaut)
+-->
+ 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listes</title>
+</head>
+<body>
+    <ul type="I">
+        <li>Un élément</li>
+        <li> Un deuxième élément 
+            <ol>
+                <li> Etape 1 
+                    <ol type="I">
+                        <li> Sous etape 1</li>
+                        <li> Sous etape 2</li>
+                    </ol>
+                </li>
+                <li> Etape 2 </li>
+            </ol>
+        </li>
+        <li> Un dernier élément</li>
+    </ul>
+</body>
+</html>

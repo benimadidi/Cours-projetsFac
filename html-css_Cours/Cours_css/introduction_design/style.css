@@ -1,0 +1,85 @@
+/*
+Une règle CSS est composée d'un sélecteur et d'une déclaration :
+    sélecteur {
+        propriété: valeur;
+    }
+
+1️⃣ Les sélecteurs de base :
+
+    1️⃣ Sélecteur de type :
+        ✅ p { color: red; } 
+        → Sélectionne tous les éléments `<p>`.
+
+    2️⃣ Sélecteur de classe :
+        ✅ .maClasse { font-weight: bold; } 
+        → Sélectionne les éléments avec `class="maClasse"`.
+
+    3️⃣ Sélecteur d’ID :
+        ✅ #monID { text-align: center; } 
+        → Sélectionne l’élément avec `id="monID`.
+
+    4️⃣ Sélecteur universel :
+        ✅ * { margin: 0; } 
+        → Sélectionne tous les éléments.
+
+2️⃣ Sélecteurs combinés :
+
+    1️⃣ Sélecteur descendant :
+        ✅ A B 
+        → Tous les `B` à l’intérieur de `A` (ex : `div p` → Tous les `<p>` dans un `<div>`).
+
+    2️⃣ Sélecteur enfant direct :
+        ✅ A > B 
+        → Tous les `B` qui sont des enfants directs de `A` (ex : `div > p` → `<p>` directement dans `<div>`).
+
+    3️⃣ Sélecteur adjacent :
+        ✅ A + B 
+        → Le premier `B` immédiatement après `A` (ex : `h1 + p` → Le `<p>` juste après `<h1>`).
+
+    4️⃣ Sélecteur général des frères :
+        ✅ A ~ B 
+        → Tous les `B` après `A` (même s’il y a d’autres éléments entre eux) (ex : `h1 ~ p` → Tous les `<p>` après `<h1>`).
+
+    5️⃣ Sélecteur de groupe :
+        ✅ A, B 
+        → Applique le style à `A` et `B` (ex : `h1, p` → Affecte les `<h1>` et `<p>`).
+
+3️⃣ Sélecteurs d’attributs :
+
+    1️⃣ [type] :
+        ✅ [type] { border: 1px solid red; } 
+        → Cible les éléments ayant un attribut spécifique.
+
+    2️⃣ [type="text"] :
+        ✅ input[type="text"] { background: yellow; } 
+        → Cible un attribut avec une valeur précise.
+
+    3️⃣ [href^="https"] :
+        ✅ a[href^="https"] { color: green; } 
+        → Cible les liens qui commencent par `https`.
+
+    4️⃣ [class*="btn"] :
+        ✅ [class*="btn"] { padding: 10px; } 
+        → Cible les éléments contenant `btn` dans leur classe.
+
+✅ Les prefixes  vendeurs sont des préfixes ajoutés aux propriétés CSS pour assurer la compatibilité entre les navigateurs.
+    Ils sont utilisés pour activer des fonctionnalités expérimentales ou non standardisées dans certains navigateurs.
+    - -webkit- : utilisé par Safari, chrome, Edge et Opera
+    - -moz- : utilisé par Firefox
+    - -ms- : utilisé par IE
+    - -o- : utilisé par Opera
+
+✅ :root : Racine de l'arbre de la feuille de style.
+    - on peut utiliser la pseudo-classe :root pour modifier les propriétés de la racine de la feuille de style en creant des variables 
+    - Ex : :root { --bg-color: #f00; }
+
+
+*/
+
+body,header, footer{margin: auto;}
+body{background-color: #DDD;margin: auto;width: 1000px;}
+p{font-variant: small-caps;}
+.text-red{color:  #f00;}
+header{height: 100px;}
+footer{text-align: center;}
+

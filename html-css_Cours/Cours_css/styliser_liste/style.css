@@ -1,0 +1,47 @@
+/*
+source pour télécharger des puces : [https://www.flaticon.com](https://www.flaticon.com/?utm_source=chatgpt.com)
+
+✅ list-style-image : Définit une image personnalisée comme puce pour une liste.
+    - Forme : url('chemin/vers/image').
+      Exemple : list-style-image: url('puce.png');
+    - ⚠️ Utilisez une image de petite taille (ex : 16x16 pixels) pour éviter les déformations.
+    - Vous pouvez redimensionner l'image avec `width` et `height` via un outil comme [ResizePixel](https://www.resizepixel.com).
+
+✅ list-style-position : Définit la position de la puce par rapport au texte.
+    - inside : La puce est à l'intérieur de la liste, le texte est indenté.
+    - outside : La puce est à l'extérieur de la liste, le texte n'est pas indenté.
+      Exemple : list-style-position: inside;
+
+✅ list-style-type : Définit le type de puce à utiliser pour une liste.
+    - none           : Pas de puce.
+    - disc           : Cercle plein (par défaut).
+    - circle         : Cercle vide.
+    - square         : Carré plein.
+    - decimal        : Chiffres (1, 2, 3, ...).
+    - lower-alpha    : Lettres minuscules (a, b, c, ...).
+    - upper-alpha    : Lettres majuscules (A, B, C, ...).
+    - lower-roman    : Chiffres romains minuscules (i, ii, iii, ...).
+    - upper-roman    : Chiffres romains majuscules (I, II, III, ...).
+    - lower-greek    : Lettres grecques minuscules (α, β, γ, ...).
+    - armenian       : Chiffres arméniens (ա, բ, գ, ...).
+    - georgian       : Chiffres géorgiens (ა, ბ, გ, ...).
+    - hiragana       : Caractères hiragana (あ, い, う, ...).
+    - hiragana-iroha : Hiragana avec l'ordre iroha (い, ろ, は, ...).
+    - katakana       : Caractères katakana (ア, イ, ウ, ...).
+    - katakana-iroha : Katakana avec l'ordre iroha (イ, ロ, ハ, ...).
+      Exemple : list-style-type: square;
+
+✅ list-style : Meta-propriété pour définir plusieurs propriétés de liste en une seule ligne.
+    - Forme : list-style: <type> <position> <image>;
+      Exemple : list-style: square inside url('puce.png');
+*/
+
+body{
+    background-color: #EEE;
+    margin: auto;
+    width: 1000px;
+}
+
+li{
+    list-style :  inside url(check-circle.png) ;
+}

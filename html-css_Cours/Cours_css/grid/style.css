@@ -1,0 +1,157 @@
+/*
+Les grids sont des conteneurs flexibles qui permettent de créer des mises en page complexes. 
+Ils sont conçus pour travailler avec des éléments de taille variable dans un conteneur.
+
+✅ CONTAINER :
+    ✅ display : Définit un conteneur de grille.
+        - grid : Active le mode grille pour les navigateurs modernes.
+        - -ms-grid : Active le mode grille pour IE 10 et 11.
+
+    ✅ grid-template-columns : Définit le nombre et la taille des colonnes.
+        - <length> : Définit la taille de la colonne (ex: 100px).
+        - auto : Taille automatique basée sur le contenu. (occupe toute la largeur disponible).
+        - fr : Fraction de l'espace disponible (ex: 1fr, 2fr).
+        - repeat() : Répète un motif de colonnes (ex: repeat(3, 1fr)).
+        - min-content : Taille minimale basée sur le contenu.
+        - max-content : Taille maximale basée sur le contenu.
+        - minmax() : Définit une plage de taille (ex: minmax(min, max)).
+            (a utiliser avec repeat()).
+
+    ✅ grid-template-rows     : Définit le nombre et la taille des lignes.
+        - <length> : Définit la taille de la ligne (ex: 100px).
+        - auto : Taille automatique basée sur le contenu.
+        - fr : Fraction de l'espace disponible (ex: 1fr, 2fr).
+        - repeat() : Répète un motif de lignes (ex: repeat(3, 1fr)).
+        - min-content : Taille minimale basée sur le contenu.
+        - max-content : Taille maximale basée sur le contenu.
+        - minmax() : Définit une plage de taille (ex: minmax(min, max)).
+            (a utiliser avec repeat()).
+
+    ✅ grid-template : Raccourci pour 'grid-template-columns' et 'grid-template-rows'.
+        - Forme : grid-template: <columns> / <rows>;
+        - Exemple : grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+
+    ✅ grid-auto-columns : Définit la taille des colonnes non defines explicitement.
+        - <length> : Définit la taille de la colonne (ex: 100px).
+        - auto : Taille automatique basée sur le contenu.
+
+    ✅ grid-auto-rows : Définit la taille des lignes non defines explicitement.
+        - <length> : Définit la taille de la ligne (ex: 100px).
+        - auto : Taille automatique basée sur le contenu.
+    
+    ✅ grid-auto-flow : Définit la direction de l'ajout des éléments.
+        - row : Ajoute les éléments par ligne (par défaut).
+        - column : Ajoute les éléments par colonne.
+
+    ✅ grid-template-areas : Définit les zones de la grille mentionnées dans 'grid-area'.
+        - Forme : grid-template-areas: "zone1 zone2 zone3" 
+                                       "zone4 zone5 zone6";
+        - Exemple : grid-template-areas: "header header header" 
+                                         "menu main main"
+                                         "footer footer footer";
+        - . : créer une zone vide.
+
+    ✅ align-content : Aligne les lignes entièrement sur l'axe transversal. (vertical).
+        - start         : Alignés au début (par défaut).
+        - end           : Alignés à la fin.
+        - center        : Alignés au centre.
+        - stretch       :Étire les éléments.
+        - space-between : Espaces égaux entre les éléments.
+        - space-around  : Espaces égaux autour des éléments.
+        - space-evenly  : Espaces uniformes entre et autour des éléments.
+    
+    ✅ justify-content : Aligne les éléments sur l'axe principal. (horizontal).
+        - start         : Alignés au début (par défaut).
+        - end           : Alignés à la fin.
+        - center        : Alignés au centre.
+        - stretch       :Étire les éléments.
+        - space-between : Espaces égaux entre les éléments.
+        - space-around  : Espaces égaux autour des éléments.
+        - space-evenly  : Espaces uniformes entre et autour des éléments.
+    
+    ✅ place-content : Aligne les éléments sur l'axe principal et transversal. 
+        - Forme : place-content: <align-content> <justify-content>;
+
+    ✅ align-items : Aligne les éléments individuellement sur l'axe transversal. (vertical).
+        - start         : Alignés au début (par défaut).
+        - end           : Alignés à la fin.
+        - center        : Alignés au centre.
+        - stretch       :Étire les éléments.
+
+    ✅  justify-items   : Aligne les éléments individuellement sur l'axe principal. (horizontal).
+        - start         : Alignés au début (par défaut).
+        - end           : Alignés à la fin.
+        - center        : Alignés au centre.
+        - stretch       :Étire les éléments.
+    
+    ✅ place-items : Aligne les éléments individuellement sur l'axe principal et transversal.
+        - Forme : place-items: <align-items> <justify-items>;
+    
+    ✅ column-gap : Définit l'espace entre les colonnes.
+        - <length> : Par exemple, 10px pour un espace de 10 pixels.
+
+    ✅ row-gap : Définit l'espace entre les lignes.
+        - <length> : Par exemple, 10px pour un espace de 10 pixels.
+    
+    ✅ gap : Raccourci pour 'column-gap' et 'row-gap'.
+        - Forme : gap: <row-gap> <column-gap>;
+        - Exemple : gap: 10px 20px;
+
+
+✅ ITEM :
+
+    ✅ grid-column : Définit la position d'un élément dans les colonnes.
+        - <colonne> : Définit la colonne de départ (ex: 1).
+        - <start> / <end> : Définit la plage de colonnes (ex: 1 / 3).
+            1/-1 : Remplir la colonne de gauche à droite.
+    
+    ✅ grid-row : Définit la position d'un élément dans les lignes.
+        - <ligne> : Définit la ligne de départ (ex: 1).
+        - <start> / <end> : Définit la plage de lignes (ex: 1 / 3).
+
+    ✅ grid-row-start : Définit la ligne de départ d'un élément.
+        - <ligne> : Définit la ligne de départ (ex: 1).
+
+    ✅ grid-row-end : Définit la ligne de fin d'un élément.
+        - <ligne> : Définit la ligne de fin (ex: 3).
+
+    ✅ grid-column-start : Définit la colonne de départ d'un élément.
+        - <colonne> : Définit la colonne de départ (ex: 1).
+
+    ✅ grid-column-end : Définit la colonne de fin d'un élément.
+        - <colonne> : Définit la colonne de fin (ex: 3).
+
+    ✅ grid-area : Associe un élément à une zone de grille.
+        - <zone> : Nom de la zone (ex: entete).
+    
+    ✅ align-self : Aligne un élément sur l'axe transversal.
+        - Même valeur que align-items.
+    
+    ✅ justify-self : Aligne un élément sur l'axe principal.
+        - Même valeur que justify-items.
+    
+    ✅ place-self : Aligne un élément sur l'axe principal et transversal.
+        - Forme : place-self: <align-self> <justify-self>;
+
+*/
+
+body{
+    background-color: #EEE;
+}
+.container{
+    border: 2px dashed #aa5230;
+    display: grid;
+    height: 500px;
+    width: 800px;
+    grid-template-rows:  150px  150px;
+    grid-template-columns: 100px 100px 100px ;
+    grid-auto-rows: 100px;
+}
+.item{
+    border: 1px solid #221fb3;
+    background-color: #386ccc;
+    color: #FFF;
+    font-weight: bolder ;
+    padding: 10px;
+}
+

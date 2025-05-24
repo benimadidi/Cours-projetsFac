@@ -1,0 +1,95 @@
+/* 
+✅ Les sprites regroupent plusieurs images en une seule pour réduire les requêtes HTTP et améliorer les performances. 
+
+✅ Les transitions permettent de modifier une propriété CSS en un temps donné.
+
+    - transition simple :
+        -transition : Definition de la transition
+            - property: Propriété à modifier
+            - duration: Durée de la transition
+
+    - transition complete : 
+        - Forme : <property> <duration> <timing-function> <delay>
+            - property: Propriété à modifier
+            - duration: Durée de la transition
+            - timing-function: Fonction de temporisation
+                - ease: La vitesse de la transition varie au début et à la fin.
+                - linear: La vitesse de la transition est constante.
+                - ease-in: La vitesse de la transition augmente au début.
+                - ease-out: La vitesse de la transition diminue à la fin.
+                - ease-in-out: La vitesse de la transition varie au début et à la fin.
+            - delay: Temps d'attente avant le début de la transition
+        
+✅ Les animations permettent de modifier plusieurs propriétés CSS en un seul temps.
+    - animation-name: Nom de l'animation
+
+    - animation-duration: Durée de l'animation
+
+    - animation-timing-function: Fonction de temporisation de l'animation
+      ease: La vitesse de l'animation varie au début et à la fin.
+        - linear: La vitesse de l'animation est constante. 
+        - ease-  - in: La vitesse de l'animation augmente au début.
+        - ease-out: La vitesse de l'animation diminue à la fin.
+        - ease-in-out: La vitesse de l'animation varie au début et à la fin.
+
+    - animation-delay: Temps d'attente avant le début de l'animation
+
+    - animation-iteration-count: Nombre de répétitions de l'animation
+        - infinite: L'animation se répète indéfiniment
+        - <nombre>: Nombre de répétitions
+
+    - animation-direction: Direction de l'animation
+        - normal: L'animation se joue dans l'ordre normal
+        - reverse: L'animation se joue à l'envers
+        - alternate: L'animation alterne entre normal et reverse
+        - alternate-reverse: L'animation alterne entre reverse et normal
+    
+    - animation : 
+        - Forme : <name> <duration> <timing-function> <delay> <iteration-count> <direction>
+
+
+    - @keyframes: Définit les étapes de l'animation
+        - Forme : @keyframes <nom-animation> { <étapes> }
+            - <étapes>: Définit les étapes de l'animation
+                - from{}: Début de l'animation
+                - to{}: Fin de l'animation
+                - percentage: Pourcentage de l'animation (0% à 100%)
+                
+
+*/
+
+div{
+    width: 200px;
+    height: 200px;
+    background-color: #0066ff;
+    position: relative;
+    animation: chgt-couleur 3s ease 1s  infinite alternate;
+}
+
+@keyframes chgt-couleur{
+    0%{
+        background-color: green;
+        top : 0px;
+        left: 0px;
+    }
+    25%{
+        background-color: yellow;
+        top: 0px;
+        left: 200px;
+    }
+    50%{
+        background-color: red;
+        top: 200px;
+        left: 200px;
+    }
+    75%{
+        background-color: blue;
+        top: 200px;
+        left: 0px;
+    }
+    100%{
+        background-color: green;
+        top: 0px;
+        left: 0px;
+    }
+}

@@ -1,0 +1,72 @@
+<!--
+AUDIO : mp3  (compatible partout)
+        wav  (compatible sauf IE)
+        ogg  (compatible sauf IE et safari)
+ 
+VIDEO : mp4  (compatible partout)
+        webm (compatible sauf IE et safari)
+        ogg  (compatible sauf IE et Safari)
+
+
+<audio></audio>   : La balise utilisé pour jouer du son 
+                  (mettre un texte dans la balise lorsque le navigateur ne supporte pas l'audio)
+    controls      : Pour avoir le controle sur l'audio
+    autoplay      : demarre l'audio automatiquement 
+    muted         : demarre l'audio en mute
+    loop          : lis le fichier en boucle 
+    preload=""    : indique au navigateur comment il doit charger le fichier audio avant que l'utilisateur ne l'ecoute
+        auto      : Le navigateur télécharge complètement l'audio dès que la page est chargée.
+        none      : Le navigateur ne télécharge rien tant que l'utilisateur ne clique pas sur le bouton de lecture
+        metadata  : Le navigateur télécharge uniquement les métadonnées du fichier (par defaut il est dans cet etat)
+    src=""        : pour introduire la source du fichier 
+    OU 
+    <source>      : utiliser pour mettre plusieurs sources si le navigateur ne supporte pas un format 
+        src=""    : pour introduire la source du fichier
+        type=""   : pour mettre le type
+            audio/mpeg (pour mp3) et le reste audio/nom_format
+
+
+<video></video>   : La balise utilisé pour jouer une vidéo 
+                    (mettre un texte dans la balise lorsque le navigateur ne supporte pas l'audio)
+    controls      : Pour avoir le controle sur l'audio
+    autoplay      : demarre l'audio automatiquement 
+    muted         : demarre l'audio en mute
+    loop          : lis le fichier en boucle 
+    preload=""    : indique au navigateur comment il doit charger le fichier audio avant que l'utilisateur ne l'ecoute
+        auto      : Le navigateur télécharge complètement l'audio dès que la page est chargée.
+        none      : Le navigateur ne télécharge rien tant que l'utilisateur ne clique pas sur le bouton de lecture
+        metadata  : Le navigateur télécharge uniquement les métadonnées du fichier (par defaut il est dans cet etat)
+    width=""      : pour definir une largeur (auto pour gerer la largeur en fonction de la hauteur)
+    height=""     : pour definir une hauteur (auto pour gerer la largeur en fonction de la largeur)
+    poster=""     : pour mettre une miniature (on passe l'url de la miniature)
+    src=""        : pour introduire la source du fichier 
+    OU 
+    <source>      : utiliser pour mettre plusieurs sources si le navigateur ne supporte pas un format 
+        src=""    : pour introduire la source du fichier
+        type=""   : pour mettre le type
+            audio/mp4 et idem pour le reste (video/nom_format)
+        
+<iframe></iframe> : pour integrer une video d'un autre site (ex: youtube)
+    src=""        : pour introduire la source du fichier 
+    width=""      : pour definir une largeur (auto pour gerer la largeur en fonction de la hauteur)
+    height=""     : pour definir une hauteur (auto pour gerer la largeur en fonction de la largeur)
+    frameborder="" : pour mettre une bordure autour de l'iframe (0 ou 1)
+    allowfullscreen : pour permettre le mode plein ecran
+    allow        : pour autoriser certaines fonctionnalitées (ex: autoplay)
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sons et Vidéos</title>
+    </head>
+    <body>
+        <h1>Sons et vidéos</h1>
+
+        <video src="la_mano_canon_video.mp4" controls width="640" height="480" poster="Chill_guy.jpg">
+            Votre navigateur ne prend pas en charge la vidéo HTML 
+        </video>
+    </body>
+</html>

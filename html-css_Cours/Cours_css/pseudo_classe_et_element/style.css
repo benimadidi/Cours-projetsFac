@@ -1,0 +1,48 @@
+/*
+✅ cursor : Modifie le curseur de la souris.
+    - auto, pointer, crosshair, default, move, text, wait, help, progress,etc.
+
+✅ Les pseudo-classes stylisent les éléments selon leur état ou position (avec un :) : 
+    - hover : au survol de la souris.
+    - link : lien non visité.
+    - visited : lien déjà visité.
+    - active : au clic. 
+    - focus : lors de la sélection (ex : champ de formulaire).
+    - required : sélectionne les champs de formulaire obligatoires.
+    - first-child : sélectionne le premier enfant d'un élément(div, ul, ol, etc).
+    - last-child : sélectionne le dernier enfant d'un élément(div, ul, ol, etc).
+    - nth-child(n) : sélectionne le nième enfant d'un élément(div, ul, ol, etc).
+        - n : index de l'enfant.
+        - even : sélectionne les enfants d'un élément avec un index pair.
+        - odd : sélectionne les enfants d'un élément avec un index impair.
+    - nth-of-type(n) : sélectionne le nième enfant d'un élément de type(div, ul, ol, etc).
+        - n : index de l'enfant.
+
+✅ Les pseudo-éléments stylisent une partie d'un élément (avec un ::) : 
+    - first-letter : stylise la première lettre d'un élément.
+    - first-line : stylise la première ligne d'un élément.
+    - selection : stylise le texte sélectionné par l'utilisateur.
+    - before : Inserer du contenu avant un élément(avec content).
+        Exemple : content: "Bonjour" avant un élément.
+    - after : Inserer du contenu à la fin d'un élément(avec content).
+        Exemple : content: "Au revoir" après un élément.
+    - placeholder : selectionne le placeholder d'un élément de formulaire.
+    
+
+
+*/
+
+body{
+    font-family: 'open sans', sans-serif;
+}
+
+div{
+    border: 1px solid black;
+}
+div::before{
+    content : "Bonjour avant les elements du div";
+}
+div::after{
+    content: "Bonjour  après les elements du div";
+}
+

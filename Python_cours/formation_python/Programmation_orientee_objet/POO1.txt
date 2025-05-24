@@ -1,0 +1,32 @@
+
+-------------------------------------------------------------------------
+LA PROGRAMMATION ORIENTEE OBJET (POO) AVEC LE LANGAGE PYTHON 
+-------------------------------------------------------------------------
+
+RAPPELS
+----------
+
+- Afficher du texte
+- Saisir des informations
+- Variables
+- Conditions et boucles
+- Fonctions et modularité
+- Getsion des erreurs
+
+NOTION DE BASE 
+----------------
+
+Classe            : Plan de coception, genre (ex : Humain )
+objet             : Instance de classe (ex : Toussaint )
+
+Attribut          : Variable de classe ( ex: prénom, age, sexe, taille, ...)
+Propiété          : Manipuler les attributs ( ex : leture seule, accès non autorisé en dehors de la classe, etc.)
+
+Methode           : Fonction sur une instance ( ex : manger, marcher, parler, dormir, mourir,    etc.)
+Methode de classe : Fonction d'une classe ( explication à venir plus tard ...)
+Methode statique  : Fonction d'une classe mais indépendante de celle-ci 
+
+Heritage          : Classe Fille qui herite d'une classe Mère ( Fille est une sorte de mère )   
+                  : Classe Chat qui herite d'une classe Animal ( Chat est une sorte d'animal )
+
+
