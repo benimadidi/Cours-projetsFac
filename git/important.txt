@@ -1,0 +1,10 @@
+cd chemin/vers/ton-projet
+
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/ton-utilisateur/mon-projet.git
+git push -u origin master
+
+
+git branch -m master mains
