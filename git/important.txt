@@ -7,4 +7,6 @@ git remote add origin https://github.com/ton-utilisateur/mon-projet.git
 git push -u origin master
 
 
-git branch -m master mains
+git branch -m master main 
+OU 
+git branch -M main 
