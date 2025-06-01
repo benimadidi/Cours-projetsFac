@@ -24,7 +24,7 @@
 
     - LIMIT : Permet de limiter le nombre de données affiché
         - LIMIT <nombre> OFFSET <nombre> : permet de limiter le nombre de données affiché en ajoutant un decalage 
-        - Propre a mysql : SELECT FROM <table> LIMIT <offset>, <limit> 
+        - Propre a mysql : SELECT * FROM <table> LIMIT <offset>, <limit> 
 */
 SHOW DATABASES;
 USE fv_database;
