@@ -9,7 +9,7 @@
         - IN(<valeur(s)) : filtre les donnees qui correspondent aux valeurs specifiees
         - BETWEEEN <fourchette> : permet de filtrer les donnees selon une fourchette de valeur
         - LIKE : permet de filtrer les donnees selon un mot ou une phrase
-            Ex : SELECT * FROM fv_games WHERE game_title LIKRE  '%<mot ou phrase>%'
+            Ex : SELECT * FROM fv_games WHERE game_title LIKE  '%<mot ou phrase>%'
                 % : Choisi n'importe quel phrase du moment ou elle trouve le mot ou la phrase
                 _ : Ne choisi que le mot ou la phrase entier
         - IS NULL : permet de filtrer les donnees qui sont null
