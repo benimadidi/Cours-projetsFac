@@ -13,7 +13,7 @@
     - TRUNCATE TABLE <nom_table> : permet de supprimer toutes les valeurs d'une table
 */
 
-UPDATE fv_games 
+UPDATE fv_games
 SET game_stock = 6, game_price = 11.59 
 WHERE id_game = 1;
 
