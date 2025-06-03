@@ -17,7 +17,7 @@
             - $e -> getLine() : permet de recuperer le numéro de la ligne où l'erreur s'est produite
             - $e -> getCode() : permet de recuperer le code de l'erreur
 
-    - finally : permet de executer du code quel que soit le resultat
+    - finally : permet d'éxecuter du code quel que soit le resultat
 
     - set_exception_handler() : permet de definir une fonction qui sera executée en cas d'exception non gérée
         FORME : set_exception_handler('nom_de_la_fonction')

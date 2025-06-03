@@ -1,7 +1,7 @@
 <?php
 
 /*
-    - include : Ajoute un fichier, avertit en cas d'erreur.
+    - include : Ajoute un fichier, averti en cas d'erreur.
     - include_once : Ajoute un fichier une seule fois.
 
     - require : Ajoute un fichier, erreur fatale si introuvable.
