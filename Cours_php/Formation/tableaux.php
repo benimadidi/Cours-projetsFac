@@ -15,11 +15,11 @@
     - $tab[cle]                       // Accéder à un élément avec sa clé.
     
     📍 PARCOURIR UN TABLEAU
-    - foreach($tab as $valeur) { }    // Parcourir sans les clés.
+    - foreach($tab as $valeur) {}     // Parcourir sans les clés.
     - foreach($tab as $cle => $valeur) { } // Parcourir avec les clés.
 
     ⚙️ FONCTIONS UTILITAIRES
-    - count($tab);                   // Compter le nombre d'éléments.
+    - count($tab);                    // Compter le nombre d'éléments.
     - array_push($tab, $valeur);      // Ajouter un élément à la fin.
     - array_pop($tab);                // Supprimer le dernier élément.
     - array_shift($tab);              // Supprimer le premier élément.

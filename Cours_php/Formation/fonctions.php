@@ -35,4 +35,4 @@ $hello = function(){
     echo "Bonjour tout le monde !";
 };
 
-$coucou();
+$hello();

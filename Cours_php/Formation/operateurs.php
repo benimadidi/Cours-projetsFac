@@ -22,7 +22,7 @@
     🔁 LOGIQUES
     - and, &&                       // ET logique.
     - or,  ||                       // OU logique.
-    - xor                          // OU exclusif (soit A, soit B, mais pas les deux).
+    - xor                           // OU exclusif (soit A, soit B, mais pas les deux).
 
 */
 
