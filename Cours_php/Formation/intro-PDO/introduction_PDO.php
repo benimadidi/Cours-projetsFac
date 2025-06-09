@@ -9,6 +9,8 @@
             - $DB_DSN : Le DSN (Data Source Name) qui contient les informations nécessaires pour se connecter à la base de données.
             - $DB_USER : Le nom d'utilisateur pour se connecter à la base de données.
             - $DB_PASS : Le mot de passe pour se connecter à la base de données.
+
+        - rowCount() : Récupère le nombre de lignes affectées par la derniere requete.
 */
 
 require 'db-config.php'; 
