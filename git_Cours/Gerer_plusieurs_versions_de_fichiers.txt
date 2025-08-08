@@ -1,0 +1,62 @@
+
+Cours Git sur comment plusieurs versions de fichiers via Git 
+-----------------------------------------------------------
+
+Initiallisation de git : 
+    git config  --global user.name "Nom de l'utilisateur" : Ajoute le nom de l'utilisateur
+    git config --global user.email "Email de l'utilisateur" : Ajoute l'email de l'utilisateur
+
+
+Pour versionner en local : 
+--------------------------
+
+    Initialisation de git sur le dossier : 
+        git init : Initialise Git sur le dossier
+
+    Ajout de fichiers dans git : 
+        git add . : Ajoute tous les fichiers, sauf les fichiers supprimés
+        git add <fichier>.txt : Ajoute le fichier
+        git add --all * : Ajoute tous les fichiers visibles du dossier, même ceux supprimés, mais pas les fichiers cachés
+        git add --all ou git add -A : Ajoute tous les changements dans le projet, même les fichiers cachés
+
+        git restore --staged <fichier> : Annule un ajout de fichiers
+
+    Metter a jour git :
+        git commit -m "Message" : Met a jour Git avec un message
+
+        git commit -a -m "Message" : Ajoute tous les fichiers du dossier avec un message
+
+    Pour faire d l'analyse et de la recherche : 
+        git log : Voir l'historique des versions
+        git status 
+        git diff <commit1> <commit2> : Voir les changements entre deux versions
+
+Pour versionner sur un dépot distant :
+-------------------------------------
+
+    git clone <url> [nom_dossier] : Cloner un dossier distant
+    git pull : Mettre a jour le dossier local
+
+    git push origin master : Mettre a jour le dossier distant
+
+
+Pour annuler le dernier commit :
+    git reset --hard HEAD : Réinitialise complètement le projet pour revenir à l’état exact du dernier commit
+    git restet --hard HEAD^ : annule le dernier commit et replace le projet à l’état du commit précédent (supprime le dernier commit)
+    git revert <commit> :  Annule un commit en créant un nouveau commit inverse.
+
+
+Autres commandes : 
+    git mv fichier1 fichier2 : Renommer un fichier
+
+
+Travailler avec plusieurs personnes sur plusieurs branches :
+----------------------------------------------------------
+
+git branch : Voir les branches
+git branch <nom> : Créer une nouvelle branche
+
+git checkout <nom> : Changer de branche
+git merge <branche> : Fusionner deux branches
+
+git branch -d <branche> : Supprimer une branche
