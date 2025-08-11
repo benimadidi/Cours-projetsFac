@@ -31,13 +31,12 @@ Pour versionner en local :
         git status 
         git diff <commit1> <commit2> : Voir les changements entre deux versions
 
+
 Pour versionner sur un dépot distant :
 -------------------------------------
 
     git clone <url> [nom_dossier] : Cloner un dossier distant
     git pull : Mettre a jour le dossier local
-
-    git push origin master : Mettre a jour le dossier distant
 
 
 Pour annuler le dernier commit :
@@ -50,13 +49,24 @@ Autres commandes :
     git mv fichier1 fichier2 : Renommer un fichier
 
 
-Travailler avec plusieurs personnes sur plusieurs branches :
-----------------------------------------------------------
+Gérer les branches :
+-------------------
 
 git branch : Voir les branches
-git branch <nom> : Créer une nouvelle branche
-
+git branch <nom> ou git checkout -b <nom> : Créer une nouvelle branche
 git checkout <nom> : Changer de branche
+git branch -d <branche> : Supprimer une branche
+
+Par convention, on va nommmer la première branche dérivée de main, develop 
+
+
+Merge des branches (fusionner deux branches) :
+--------------------
+Un merge est une fusion de deux branches.
+
 git merge <branche> : Fusionner deux branches
 
-git branch -d <branche> : Supprimer une branche
+
+Pull requests : 
+--------------
+Un pull requests est une demande de fusion de deux branches. 
