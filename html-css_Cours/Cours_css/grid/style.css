@@ -31,7 +31,7 @@ Ils sont conçus pour travailler avec des éléments de taille variable dans un 
         - Forme : grid-template: <columns> / <rows>;
         - Exemple : grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 
-    ✅ grid-auto-columns : Définit la taille des colonnes non defines explicitement.
+    ✅ grid-auto-columns : Définit la taille des colonnes non definies explicitement.
         - <length> : Définit la taille de la colonne (ex: 100px).
         - auto : Taille automatique basée sur le contenu.
 

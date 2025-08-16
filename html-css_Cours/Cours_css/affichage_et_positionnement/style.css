@@ -36,8 +36,7 @@
             right    : Distance par rapport à la droite du conteneur.
             bottom   : Distance par rapport au bas du conteneur.
             left     : Distance par rapport à la gauche du conteneur.
-            z-index  : Ordre d'empilement (plus la valeur est élevée, plus l'élément est au-dessus).
-
+            
     -float           : Permet de faire flotter un élément.
         left         : L'élément flotte à gauche.
         right        : L'élément flotte à droite.
