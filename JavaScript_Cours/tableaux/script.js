@@ -49,7 +49,9 @@ tab.splice() : Ajoute ou supprime des elements dans le tableau
     (element_debut, nombre_element_a_supprimer, element_a_ajouter)
 
 tab.filter() : Filtre le tableau (avec une fonction)
-
+tab.map() : Applique une fonction a chaque element du tableau et retourne un nouveau tableau
+tab.reduce() : Reduit le tableau a une seule valeur (avec une fonction)
+  
 */
 
 let someArray = ["Yannis", "Lonathan", "Snel", "muluba", "mahenzi", "Lexas"];
