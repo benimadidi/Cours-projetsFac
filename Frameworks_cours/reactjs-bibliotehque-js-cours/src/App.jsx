@@ -3,6 +3,9 @@ import LeHookUseState from './cours/le_hook_useState';
 import LesFormulaires from './cours/les_formulaires';
 import LefluxDeDonnees from './cours/le_flux_de_donnees';
 import LeHookUseEffect from './cours/le_hook_useEffect';
+import LeHookUseMemo from './cours/le_hook_useMemo';
+import LeHookUseRef from './cours/le_hook_useRef';
+import HookPersonnalise from './cours/hook_personnalise';
 
 //Exercice
 import  ListeDeProduit from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/liste_de_produit/index"
@@ -10,7 +13,7 @@ import  Timer from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-framewo
 
 
 function App() {
-  return <Timer />;
+  return <HookPersonnalise />;
 }
 
 export default App
