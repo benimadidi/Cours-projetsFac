@@ -10,10 +10,12 @@ import HookPersonnalise from './cours/hook_personnalise';
 //Exercice
 import  ListeDeProduit from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/liste_de_produit/index"
 import  Timer from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/Timer_useEffect/index"
+import  Increment from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/Increment_useIncrement/index"
+import  EditTitle from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/editer_le_nom_de_la_page/index"
 
 
 function App() {
-  return <HookPersonnalise />;
+  return <HookPersonnalise />
 }
 
 export default App
