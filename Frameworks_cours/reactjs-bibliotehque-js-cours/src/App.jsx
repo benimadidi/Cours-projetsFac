@@ -6,6 +6,7 @@ import LeHookUseEffect from './cours/le_hook_useEffect';
 import LeHookUseMemo from './cours/le_hook_useMemo';
 import LeHookUseRef from './cours/le_hook_useRef';
 import HookPersonnalise from './cours/hook_personnalise';
+import MemorisationEtUseCallback from './cours/memorisation_et_usecallback';
 
 //Exercice
 import  ListeDeProduit from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/liste_de_produit/index"
@@ -15,7 +16,7 @@ import  EditTitle from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-fra
 
 
 function App() {
-  return <HookPersonnalise />
+  return <MemorisationEtUseCallback />
 }
 
 export default App
