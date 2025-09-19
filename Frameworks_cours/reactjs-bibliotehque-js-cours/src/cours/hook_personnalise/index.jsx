@@ -1,16 +1,43 @@
 
 /*
 
-Le hook personnalisé vont nous permettre de regrouper une logique de hook que l'on va pouvoir réutiliser dans plusieurs composants.
-Dès qu'une fonction utilise un hook, il devient un hook personnalisé(doit donc commencer par use)
+    Les Hooks personnalisés (Custom Hooks)
 
-On peut aussi aller sur des sites qui fournissent des hooks personnalisés comme :   
-    - https://usehooks.com
-    - https://usehooks-ts.com
-    - https://github.com/streamich/react-use
+📌 Définition :
+- Un hook personnalisé permet de regrouper une logique basée sur des hooks React (useState, useEffect, etc.).
+- Cette logique devient réutilisable dans plusieurs composants.
+- Toute fonction qui utilise un hook doit obligatoirement commencer par "use" (ex : useFetch, useForm).
 
+📌 Avantages :
+- Réutilisation du code (ne pas dupliquer la même logique dans plusieurs composants).
+- Meilleure lisibilité et organisation.
+- Facilité de test unitaire (logique isolée).
+
+📌 Exemple :
+function useWindowWidth() {
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return width;
+}
+
+function App() {
+    const width = useWindowWidth();
+    return <p>Largeur de la fenêtre : {width}px</p>;
+}
+
+📌 Ressources de hooks personnalisés :
+- https://usehooks.com
+- https://usehooks-ts.com pour Typescript
+- https://github.com/streamich/react-use
 
 */
+
 
 import { useState } from "react"
 import { useFetch } from "../hooks/useFetch"
@@ -22,8 +49,6 @@ function useToggle(initial = false){
     return [state, toggle]
 
 } 
-
-
 
 
 function HookPersonnalise() {
