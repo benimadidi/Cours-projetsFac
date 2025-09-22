@@ -1,31 +1,29 @@
 
 import { useMemo, useState } from "react";
 
-/*
+{/*
+⚡ Hook useMemo
 
-  - Le hook useMemo permet de mémoriser le résultat d’un calcul pour éviter de le recalculer à chaque rendu du composant.
-  - Il sert à optimiser les performances quand un calcul est coûteux (par ex. un tri, un filtre, une opération lourde).
-  - Pour utiliser useMemo, il faut l'importer depuis React.
+👉 Définition :
+- Le hook useMemo permet de mémoriser le **résultat d’un calcul** afin d’éviter de le recalculer à chaque rendu du composant.
+- Il est utilisé pour **optimiser les performances**, surtout si le calcul est lourd (tri, filtre, opérations complexes…).
 
-  - useMemo prend deux arguments : une fonction de calcul et un tableau de dépendances.
-        1. La fonction de calcul retourne la valeur à mémoriser.
-        2. Le tableau de dépendances indique quand recalculer la valeur.
-        3. Si aucune dépendance ne change, React réutilise directement la valeur mémorisée.
+👉 Syntaxe :
+const valeurMémorisée = useMemo(() => {
+    // calcul coûteux
+    return resultat;
+}, [dépendances]);
 
-  - Si le tableau de dépendances est vide, le calcul sera exécuté une seule fois lors du montage, et la même valeur sera toujours réutilisée.
-  - Si le tableau contient des variables, le calcul sera relancé uniquement quand une de ces variables change.
-  - Si on ne met pas de tableau de dépendances, le calcul sera refait à chaque rendu (ce qui annule l’intérêt de useMemo).
+    - 1er argument : fonction de calcul qui retourne une valeur.
+    - 2ème argument : tableau de dépendances.
+        - []  → calcul exécuté une seule fois au montage.
+        - [var] → recalcul uniquement si "var" change.
+        - rien → recalcul à chaque rendu (inutile → pas d’optimisation).
 
-  - Exemple d’utilisation :
-        const sortedList = useMemo(() => {
-            return list.sort((a, b) => a - b);
-        }, [list]);
-        
-        Ici, le tri n’est refait que lorsque `list` change.
-
-  - Attention à ne pas abuser de useMemo : il est utile uniquement pour les calculs lourds ou pour éviter de recréer des objets/fonctions à chaque rendu.
-
-*/
+👉 Bonnes pratiques :
+- Utiliser useMemo uniquement pour les calculs **lourds**.
+- Éviter d’en abuser, car ça complique le code sans gain réel si le calcul est léger.
+*/}
 
 
 function LeHookUseMemo() {

@@ -1,23 +1,26 @@
 import {useState} from "react";
 
-{/* 
-Le hook useState
+{/*
+⚡ Hook useState
 
-  - Le hook useState permet de gérer l'état d'un composant fonctionnel.
-  - Il permet de créer des variables d'état qui, lorsqu'elles sont mises à jour, 
-    provoquent le re-render (rafraîchissement) du composant.
-  - Pour utiliser useState, il faut l'importer depuis React.
-  - useState prend une valeur initiale en argument et retourne un tableau avec deux éléments :
-      1. la valeur actuelle de l'état 
-      2. une fonction pour mettre à jour cette valeur
-  - Lorsqu'on appelle la fonction de mise à jour, React re-render le composant avec la nouvelle valeur d'état.
-  -Lorsqu'on passe sur des elements complexes (objets, tableaux), il est important de créer une nouvelle référence
-   (en utilisant par exemple l'opérateur de décomposition ... ) pour que React détecte le changement d'état.
-  - useState fournit un espace mémoire qui sera partagé à chaque re-render du composant,
-    évitant ainsi de perdre les données stockées.
-    
-  - Ne pas mettre dans une condition l'appel au hook useState, sinon React ne pourra pas suivre correctement l'état du composant.
-  
+👉 Définition :
+- Le hook useState permet de gérer l’**état local** d’un composant fonctionnel.
+- Il crée une variable d’état qui survit aux re-renders et qui, quand elle change, déclenche un nouveau rendu.
+
+👉 Syntaxe :
+const [state, setState] = useState(valeurInitiale);
+
+    - state : la valeur actuelle de l’état
+    - setState : fonction pour mettre à jour l’état
+    - valeurInitiale : valeur de départ (string, number, object, array…)
+
+👉 Points importants :
+- À chaque appel de setState, React re-render le composant avec la nouvelle valeur.
+- Pour des états complexes (objets/arrays), il faut **créer une nouvelle référence** 
+  (ex: via l’opérateur spread `...`) afin que React détecte le changement.
+- useState fournit un espace mémoire conservé entre chaque re-render.
+- ⚠️ Ne jamais appeler useState dans une condition, une boucle ou une fonction imbriquée → 
+  il doit toujours être au niveau supérieur du composant.
 */}
 
 function LeHookUseState (){

@@ -1,21 +1,34 @@
 
-/*
+{/*
+⚡ Hook useEffect
 
-  - Le hook useEffect permet de générer les effets de bord dans un composant fonctionnel lorsqu'il est monté ou mis à jour.
-  - Il permet d'effectuer des actions lorsque le composant est monté ou mis à jour.
-  - Pour utiliser useEffect, il faut l'importer depuis React.
-  - useEffect prend deux arguments : une fonction et un tableau de dépendances.
-        1. La fonction est exécutée après chaque rendu du composant.
-        2. Le tableau de dépendances permet de s'assurer que la fonction soit exécutée seulement lorsque certaines valeurs changent.
-        3. Mettre une fonction de nettoyage (cleanup) dans le return de la fonction passée à useEffect pour éviter les fuites de mémoire.
+👉 Définition :
+- Le hook useEffect permet de gérer les effets de bord dans un composant fonctionnel.
+- Un effet de bord (side effect) = toute opération en dehors du rendu pur de l’UI :
+    - Récupérer des données depuis une API
+    - Accéder au localStorage
+    - Manipuler le DOM
+    - Définir un intervalle ou un timer
 
-  - Si le tableau de dépendances est vide, la fonction sera exécutée seulement une fois, lors du montage du composant.
-  - Si le tableau de dépendances contient des variables, la fonction sera exécutée à chaque fois que l'une de ces variables change.
-  - Si le tableau de dépendances n'est pas fourni, la fonction sera exécutée après chaque rendu du composant.
+👉 Syntaxe :
+useEffect(() => {
+    // code exécuté après le rendu
+    return () => {
+        // fonction de nettoyage (cleanup), exécutée avant le démontage
+    }
+}, [dépendances]);
 
-  - Ne pas mettre dans une condition l'appel au hook useEffect, sinon React ne pourra pas suivre correctement l'état du composant.
+    - 1er argument : une fonction (effet à exécuter).
+    - 2ème argument : tableau de dépendances.
+        - []  → exécute seulement au montage (comme componentDidMount).
+        - [var] → exécute à chaque fois que "var" change.
+        - rien → exécute après chaque rendu.
 
-*/
+👉 Bonnes pratiques :
+- Toujours préciser les dépendances pour éviter des bugs.
+- Ne jamais mettre l’appel de useEffect dans une condition.
+- Utiliser la fonction de nettoyage pour éviter les fuites de mémoire (ex : clearInterval).
+*/}
 
 import { useEffect } from "react"
 import { useState } from "react"

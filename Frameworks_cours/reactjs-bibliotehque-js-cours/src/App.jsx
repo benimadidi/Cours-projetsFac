@@ -10,6 +10,7 @@ import MemorisationEtUseCallback from './cours/memorisation_et_usecallback';
 import LesPortails from './cours/les_portails';
 import CapturerLesErreursAvecErrorBoundary from './cours/capturer_les_erreurs_avec_ErrorBoundary';
 import ChargementAsynchroneViaLazy from './cours/chargement_asynchrone_via_lazy';
+import LeHookUseReducer from './cours/le_hook_useReducer';
 
 //Exercice
 import  ListeDeProduit from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/liste_de_produit/index"
@@ -19,7 +20,7 @@ import  EditTitle from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-fra
 
 
 function App() {
-  return <ChargementAsynchroneViaLazy />
+  return <LeHookUseReducer />
 }
 
 export default App
