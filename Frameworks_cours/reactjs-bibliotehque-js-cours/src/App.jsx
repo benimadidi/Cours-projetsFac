@@ -12,6 +12,7 @@ import CapturerLesErreursAvecErrorBoundary from './cours/capturer_les_erreurs_av
 import ChargementAsynchroneViaLazy from './cours/chargement_asynchrone_via_lazy';
 import LeHookUseReducer from './cours/le_hook_useReducer';
 import LeHookUseContext from './cours/le_hook_useContext';
+import ReactRouterDom from './cours/react_router_dom';
 
 //Exercice
 import  ListeDeProduit from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/liste_de_produit/index"
@@ -21,7 +22,7 @@ import  EditTitle from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-fra
 
 
 function App() {
-  return <LeHookUseContext />
+  return <ReactRouterDom />
 }
 
 export default App
