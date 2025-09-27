@@ -13,6 +13,7 @@ import ChargementAsynchroneViaLazy from './cours/chargement_asynchrone_via_lazy'
 import LeHookUseReducer from './cours/le_hook_useReducer';
 import LeHookUseContext from './cours/le_hook_useContext';
 import ReactRouterDom from './cours/react_router_dom';
+import FramerMotion from './cours/framer_motion';
 
 //Exercice
 import  ListeDeProduit from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/liste_de_produit/index"
@@ -22,7 +23,7 @@ import  EditTitle from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-fra
 
 
 function App() {
-  return <ReactRouterDom />
+  return <FramerMotion />
 }
 
 export default App
