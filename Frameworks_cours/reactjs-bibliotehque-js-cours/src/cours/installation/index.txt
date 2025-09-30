@@ -1,0 +1,26 @@
+
+Procédure d'installation de React avec Vite
+
+- On utilise Vite, qui est un outil moderne de build et de développement pour React.
+- Pré-requis : avoir Node.js installé sur son système (version récente conseillée).
+
+Étapes :
+  1. Initialiser le projet :
+       npm create vite@latest ./
+       → Cette commande va :
+          - Vider le dossier actuel
+          - Demander un nom pour le package
+          - Demander de choisir un framework (choisir "React" ou "React + TypeScript")
+
+  2. Installer les dépendances :
+       npm i
+       → Télécharge et installe toutes les dépendances listées dans package.json
+
+  3. Démarrer le serveur de développement :
+       npm run dev
+       → Lance un serveur local (par défaut sur http://localhost:5173)
+
+Remarque :
+- Vite est beaucoup plus rapide que Create React App (CRA), car il utilise ESBuild et Rollup.
+- Il prend en charge le Hot Module Replacement (HMR), donc les changements s'affichent instantanément.
+

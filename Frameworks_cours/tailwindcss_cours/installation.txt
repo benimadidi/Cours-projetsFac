@@ -1,0 +1,28 @@
+
+Procédure d'installation et d'utilisation de Tailwind CSS
+
+1. Installer Tailwind CSS :
+   npm install tailwindcss @tailwindcss/cli
+   → Installe Tailwind et son CLI.
+
+2. Importer Tailwind dans le fichier CSS principal :
+   @import "tailwindcss";
+   → Cela permet d'utiliser toutes les utilités de Tailwind.
+
+3. Lancer le processus de build Tailwind :
+   npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+   → Cette commande va :
+       - Scanner le projet pour détecter les classes utilisées
+       - Générer le fichier CSS final (output.css)
+       - Mettre à jour automatiquement lors des changements (--watch)
+
+4. Ajouter le fichier CSS compilé dans l'HTML :
+   <link href="./output.css" rel="stylesheet">
+
+
+Remarques :
+- Tailwind est un framework CSS utilitaire → on écrit les styles directement dans les classes.
+- Plus rapide que d'écrire du CSS personnalisé à chaque fois.
+- On peut combiner Tailwind avec React, Vite, Next.js, etc.
+- On peut configurer un fichier "tailwind.config.js" pour personnaliser les couleurs, polices, breakpoints...
+
