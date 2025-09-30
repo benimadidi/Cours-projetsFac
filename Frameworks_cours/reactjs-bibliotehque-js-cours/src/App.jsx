@@ -1,3 +1,5 @@
+/*--------------------------------------------------------------------------------------------------*/
+//Cours
 import LaSyntaxeJsx from './cours/la_syntaxe_jsx';
 import LeHookUseState from './cours/le_hook_useState';
 import LesFormulaires from './cours/les_formulaires';
@@ -14,16 +16,18 @@ import LeHookUseReducer from './cours/le_hook_useReducer';
 import LeHookUseContext from './cours/le_hook_useContext';
 import ReactRouterDom from './cours/react_router_dom';
 import FramerMotion from './cours/framer_motion';
+/*--------------------------------------------------------------------------------------------------*/
 
+/*--------------------------------------------------------------------------------------------------*/
 //Exercice
 import  ListeDeProduit from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/liste_de_produit/index"
 import  Timer from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/Timer_useEffect/index"
 import  Increment from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/Increment_useIncrement/index"
 import  EditTitle from "C:/Users/hp/Desktop/Vs_code/Exercices-prog/exercices-frameworks/ReactJS/editer_le_nom_de_la_page/index"
-
+/*--------------------------------------------------------------------------------------------------*/
 
 function App() {
-  return <FramerMotion />
+  return <LaSyntaxeJsx />
 }
 
 export default App
