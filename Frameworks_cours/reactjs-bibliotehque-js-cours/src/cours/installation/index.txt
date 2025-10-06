@@ -9,7 +9,7 @@ Procédure d'installation de React avec Vite
        npm create vite@latest ./
        → Cette commande va :
           - Vider le dossier actuel
-          - Demander un nom pour le package
+          - Demander un nom pour le package (mettre un "." pour mettre le nom du projet actuel)
           - Demander de choisir un framework (choisir "React" ou "React + TypeScript")
 
   2. Installer les dépendances :
