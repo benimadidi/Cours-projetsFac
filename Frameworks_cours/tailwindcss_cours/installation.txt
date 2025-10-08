@@ -28,13 +28,12 @@ I. Avec le CLI
    - On peut configurer un fichier "tailwind.config.js" pour personnaliser les couleurs, polices, breakpoints...
 
 II. Avec Vite :
-1. Création du projet React avec Vite :
+1. Création du projet React avec Vite (si le projet n'a pas encore été créer) :
 npm create vite@latest my-project 
 cd my-project
 
 2. Installation de Tailwind CSS et des dépendances:
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+npm install tailwindcss @tailwindcss/vite
 
 3. Configuration du fichier tailwind.config.js
 Ouvre le fichier tailwind.config.js et remplace le contenu par :
