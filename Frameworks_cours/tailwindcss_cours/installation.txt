@@ -35,18 +35,16 @@ cd my-project
 2. Installation de Tailwind CSS et des dépendances:
 npm install tailwindcss @tailwindcss/vite
 
-3. Configuration du fichier tailwind.config.js
-Ouvre le fichier tailwind.config.js et remplace le contenu par :
-export default {
-   content: [
-      "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}",
-   ],
-   theme: {
-      extend: {},
-   },
-   plugins: [],
-}
+3. Configuration du fichier vite.config.js
+Ouvre le fichier vite.config.js et remplace le contenu par :
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})}
 
 
 4. Ajout de Tailwind dans le fichier src/index.css 

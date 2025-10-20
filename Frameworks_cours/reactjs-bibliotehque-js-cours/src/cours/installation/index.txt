@@ -13,7 +13,7 @@ Procédure d'installation de React avec Vite
           - Demander de choisir un framework (choisir "React" ou "React + TypeScript")
 
   2. Installer les dépendances :
-       npm i
+       npm install
        → Télécharge et installe toutes les dépendances listées dans package.json
 
   3. Démarrer le serveur de développement :
