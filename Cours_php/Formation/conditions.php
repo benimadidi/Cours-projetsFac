@@ -24,9 +24,15 @@
 - if / elseif / else          // Condition classique.
 - switch / case / default     // Cas multiples :
   switch(expr) {
-      case val1: ... break;
-      case val2: ... break;
-      default: ... break;
+      case val1: 
+        ... 
+        break;
+      case val2: 
+        ... 
+        break;
+      default: 
+        ... 
+        break;
   }
 - Ternaire : (condition) ? expr1 : expr2;  // Forme courte de if/else.
 
@@ -43,5 +49,5 @@
 
 $number = 14;
 
-if (is_string($number))
+if (is_string($number)) 
     echo "C'est un entier " ;

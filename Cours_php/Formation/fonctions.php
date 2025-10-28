@@ -12,7 +12,7 @@
     🔁 RETOUR & PARAMÈTRES
     - Une fonction peut retourner un résultat (avec return).
     - Les paramètres peuvent avoir une valeur par défaut.
-    - On peut utiliser ...$args pour accepter un nombre infini d’arguments.
+    - On peut utiliser "...$args" pour accepter un nombre infini d’arguments.
 
     📌 TYPES DE PARAMÈTRES POSSIBLES
     - array
@@ -34,5 +34,6 @@ $coucou();
 $hello = function(){
     echo "Bonjour tout le monde !";
 };
+
 
 $hello();
