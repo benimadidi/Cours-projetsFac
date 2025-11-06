@@ -18,6 +18,7 @@
         - "parent::" : permet d’appeler le constructeur ou une méthode de la classe parent.
         - Les propriétés "protected" peuvent être utilisées dans les classes filles,
           contrairement aux propriétés "private" (accessibles uniquement dans la classe elle-même).
+        - "final" : empêche une classe ou une méthode d’être héritée.
 
     ➤ Exemple ci-dessous :
         - La classe "Card" est la classe parent.
