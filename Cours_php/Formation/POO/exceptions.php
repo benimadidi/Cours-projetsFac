@@ -1,34 +1,64 @@
-
 <?php
 
 /*
-    - throw : permet de lever une exception
-        new Exception("<message>") : permet de créer une exception
+==============================================
+    ⚠️ LES EXCEPTIONS EN PHP
+==============================================
 
-    - try : permet de tester un code
-    - catch : permet de capturer une exception
-        FORME : try {} catch (ExceptionType $e) {}
-            - ExceptionType : classe de base pour toutes les exceptions (classe principale)
-            - $e : variable qui contient l'exception
+Les exceptions permettent de gérer les erreurs dans un programme 
+de manière structurée et propre, sans interrompre brutalement l’exécution du code.
 
-        Avec la variable "$e" on peut utiliser d'autres attributs
-            - $e -> getMessage() : permet de recuperer le message de l'exception
-            - $e -> getFile() : permet de recuperer le nom du fichier où l'erreur s'est produite
-            - $e -> getLine() : permet de recuperer le numéro de la ligne où l'erreur s'est produite
-            - $e -> getCode() : permet de recuperer le code de l'erreur
+Elles représentent un mécanisme de contrôle d’erreurs orienté objet.
 
-    - finally : permet d'éxecuter du code quel que soit le resultat
+----------------------------------------------
+🔹 DÉFINITION :
+----------------------------------------------
 
-    - set_exception_handler() : permet de definir une fonction qui sera executée en cas d'exception non gérée
-        FORME : set_exception_handler('nom_de_la_fonction')
-            - nom_de_la_fonction : nom de la fonction à executer en cas d'exception non gérée
-            - cette fonction doit prendre un parametre de type Exception
+Une exception est un objet spécial qui signale qu’une erreur s’est produite.
+Au lieu d’afficher directement une erreur, le programme lance (throw) une exception,  
+et une autre partie du code peut l’attraper (catch) pour la traiter proprement.
+
+----------------------------------------------
+🔹 MOTS-CLÉS IMPORTANTS :
+----------------------------------------------
+
+→ try : contient le code susceptible de provoquer une erreur.  
+→ throw : sert à lancer une exception.  
+→ catch : permet de récupérer et traiter l’erreur.  
+→ finally : (optionnel) s’exécute toujours, qu’il y ait une erreur ou non.
+
+----------------------------------------------
+💡 AVANTAGE :
+----------------------------------------------
+
+✅ Séparation claire entre le code “normal” et la gestion des erreurs.  
+✅ Meilleure lisibilité et maintenance du code.  
+✅ Possibilité de créer ses propres types d’exceptions.
+
+----------------------------------------------
+🔹 RÉSUMÉ RAPIDE :
+----------------------------------------------
+
+try       → On surveille du code.
+throw     → On lance une exception.
+catch     → On attrape et on traite l’exception.
+finally   → On exécute du code quoi qu’il arrive.
+
 */
 
-function showError($ex){
-    echo 'Erreur : '. $ex->getMessage();
+try {
+    $diviseur = 0;
+
+    if ($diviseur == 0) {
+        throw new Exception("Division par zéro interdite !");
+    }
+
+    echo 10 / $diviseur;
+} catch (Exception $e) {
+    echo '❌ Erreur : ' . $e->getMessage();
+} finally {
+    echo '<br>Bloc finally exécuté (nettoyage, fermeture de connexion, etc.)';
 }
 
-set_exception_handler('showError'); 
 
-throw new Exception("Utilisateur introuvable !"); 
+
