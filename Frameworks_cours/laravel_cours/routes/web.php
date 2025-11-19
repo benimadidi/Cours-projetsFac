@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -59,7 +60,12 @@ Route::prefix('/blog')->group(function () {
     On utilise la fonction `route('nom', [paramètres])`
     pour générer dynamiquement une URL à partir du nom d’une route existante.
     */
-    Route::get('/', function (Request $request) {
+    Route::get('/', function () {
+        $post = new Post();
+        $post->title = "Mon premier article";
+        $post->slug = "Mon-premier-article";
+        $post->content = "Mon contenu";
+
         return [
             'link' => route('blog.show', ['slug' => 'article', 'id' => 13]),
         ];
@@ -106,4 +112,14 @@ Il permet d’accéder aux informations de la requête HTTP :
 
 Cet objet est injecté automatiquement par Laravel,
 il n’y a donc rien à instancier manuellement !
+*/
+
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/*L'ORM ELOQUENT*/
+
+/*
+    Pour mettre en place mysqli, il faut modifier le fichier d'environnement .env
 */
