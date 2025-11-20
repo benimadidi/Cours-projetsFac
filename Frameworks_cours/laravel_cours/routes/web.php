@@ -32,7 +32,7 @@ lorsqu’un utilisateur accède à une URL donnée.
 ----------------------------------------------
 Cette route renvoie la vue "welcome" (déjà incluse dans Laravel).
 
-📍 URL : http://localhost:8000/
+📍 URL : http:ocalhost:8000/
 */
 Route::get('/', function () {
     return view('welcome');
@@ -61,10 +61,31 @@ Route::prefix('/blog')->group(function () {
     pour générer dynamiquement une URL à partir du nom d’une route existante.
     */
     Route::get('/', function () {
-        $post = new Post();
-        $post->title = "Mon premier article";
-        $post->slug = "Mon-premier-article";
-        $post->content = "Mon contenu";
+
+    /*
+    ----------------------------------------------
+    ✨ Résumé
+    ----------------------------------------------
+    ✔ new Post() → crée un objet vide
+    ✔ $post->title = ... → remplit des colonnes
+    ✔ $post->save() → écrit dans la base
+    ✔ Post::all([champs...]) → récupère tous les enregistrements
+    ✔ Post::find() → récupère un enregistrement par son ID
+
+    pour modifier un enregistrement :
+        ✔ $post = Post::find() → récupère l’enregistrement avec l’ID 
+        ✔ $post->title = ... → modifie des colonnes
+        ✔ $post->save() → met à jour dans la base
+
+    */
+
+        // $post = new Post();
+        // $post->title = "Mon premier article";
+        // $post->slug = "Mon-second-article";
+        // $post->content = "Mon contenu";
+        // $post->save();
+
+        return Post::where('id', '=', 1)->get();
 
         return [
             'link' => route('blog.show', ['slug' => 'article', 'id' => 13]),
@@ -78,21 +99,18 @@ Route::prefix('/blog')->group(function () {
     ----------------------------------------------
     Les accolades { } permettent de capturer des valeurs dans l’URL.
     Exemple :
-        ➜ http://localhost:8000/blog/article-13?name=Toussaint
+        ➜ http:ocalhost:8000/blog/article-13?name=Toussaint
 
     🔹 La méthode `where()` permet de poser des contraintes sur les paramètres.
        Par exemple : un ID numérique, un slug sans caractères spéciaux, etc.
     */
     Route::get('/{slug}-{id}', function (string $slug, string $id, Request $request) {
-        return [
-            'slug' => $slug,
-            'id' => $id,
-            'name' => $request->input('name')
-        ];
+        $post = Post::findorFail($id);
+        return $post;
     })
     ->where([
-        'id' => '[0-9]+',          // L’ID doit être un nombre
-        'slug' => '[a-z0-9\-]+'    // Le slug ne contient que des lettres, chiffres et tirets
+        'id' => '[0-9]+',          //L’ID doit être un nombre
+        'slug' => '[a-z0-9\-]+'    //Le slug ne contient que des lettres, chiffres et tirets
     ])
     ->name('blog.show');
 });
