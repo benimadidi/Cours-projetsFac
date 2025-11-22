@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -50,7 +51,7 @@ Exemples d’URL :
    ➜ /blog
    ➜ /blog/article-13
 */
-Route::prefix('/blog')->group(function () {
+Route::prefix('/blog')->name('blog.')->group(function () {
 
     /*
     ----------------------------------------------
@@ -60,37 +61,7 @@ Route::prefix('/blog')->group(function () {
     On utilise la fonction `route('nom', [paramètres])`
     pour générer dynamiquement une URL à partir du nom d’une route existante.
     */
-    Route::get('/', function () {
-
-    /*
-    ----------------------------------------------
-    ✨ Résumé
-    ----------------------------------------------
-    ✔ new Post() → crée un objet vide
-    ✔ $post->title = ... → remplit des colonnes
-    ✔ $post->save() → écrit dans la base
-    ✔ Post::all([champs...]) → récupère tous les enregistrements
-    ✔ Post::find() → récupère un enregistrement par son ID
-
-    pour modifier un enregistrement :
-        ✔ $post = Post::find() → récupère l’enregistrement avec l’ID 
-        ✔ $post->title = ... → modifie des colonnes
-        ✔ $post->save() → met à jour dans la base
-
-    */
-
-        // $post = new Post();
-        // $post->title = "Mon premier article";
-        // $post->slug = "Mon-second-article";
-        // $post->content = "Mon contenu";
-        // $post->save();
-
-        return Post::where('id', '=', 1)->get();
-
-        return [
-            'link' => route('blog.show', ['slug' => 'article', 'id' => 13]),
-        ];
-    })->name('blog.index');
+    Route::get('/', [BlogController::class, 'index'])->name('index');
 
 
     /*
@@ -104,15 +75,11 @@ Route::prefix('/blog')->group(function () {
     🔹 La méthode `where()` permet de poser des contraintes sur les paramètres.
        Par exemple : un ID numérique, un slug sans caractères spéciaux, etc.
     */
-    Route::get('/{slug}-{id}', function (string $slug, string $id, Request $request) {
-        $post = Post::findorFail($id);
-        return $post;
-    })
-    ->where([
+    Route::get('/{slug}-{id}', [BlogController::class, 'show'])->where([
         'id' => '[0-9]+',          //L’ID doit être un nombre
         'slug' => '[a-z0-9\-]+'    //Le slug ne contient que des lettres, chiffres et tirets
     ])
-    ->name('blog.show');
+    ->name('show');
 });
 
 
@@ -132,12 +99,3 @@ Cet objet est injecté automatiquement par Laravel,
 il n’y a donc rien à instancier manuellement !
 */
 
-
-
-
-/*----------------------------------------------------------------------------------------------*/
-/*L'ORM ELOQUENT*/
-
-/*
-    Pour mettre en place mysqli, il faut modifier le fichier d'environnement .env
-*/
