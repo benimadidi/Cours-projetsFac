@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\View\View;
 use Nette\Utils\Paginator;
+
+use Spatie\LaravelIgnition\Exceptions\ViewException;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /*
@@ -87,7 +90,7 @@ public function index()
 
 class BlogController extends Controller
 {
-    public function index(): LengthAwarePaginator
+    public function index(): View
     {
 
         /*
@@ -113,8 +116,11 @@ class BlogController extends Controller
             // $post->content = "Mon contenu";
             // $post->save();
 
-            return Post::paginate(25);
+            $posts = Post::paginate(1);
 
+            return view('blog.index', [
+                'posts' => $posts 
+            ]);
     }
 
     public function show(string $slug, string $id): RedirectResponse | Post
