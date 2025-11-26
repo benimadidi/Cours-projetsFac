@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Validator as FacadesValidator;
 use Illuminate\View\View;
 use Nette\Utils\Paginator;
 
@@ -92,6 +93,111 @@ class BlogController extends Controller
 {
     public function index(): View
     {
+    /*
+        ====================================================
+        🧪 VALIDATION AVEC LA CLASSE VALIDATOR (LARAVEL)
+        ====================================================
+
+        Laravel propose un validateur manuel via la façade Validator.
+        Il est utile si on veut :
+            ✔ plus de contrôle
+            ✔ valider en plusieurs étapes
+            ✔ personnaliser les messages d’erreurs
+
+        ----------------------------------------------------
+        📌 1. IMPORTER LA CLASSE
+        ----------------------------------------------------
+        use Illuminate\Support\Facades\Validator;
+
+        ----------------------------------------------------
+        📌 2. CRÉER UNE VALIDATION MANUELLE
+        ----------------------------------------------------
+        public function store(Request $request)
+        {
+            $validator = Validator::make($request->all(), [
+                'title'   => 'required|min:3',
+                'email'   => 'required|email',
+                'content' => 'nullable|min:10'
+            ]);
+
+            if ($validator->fails()) {
+                return redirect()->back()
+                                ->withErrors($validator)
+                                ->withInput();
+            }
+
+            Post::create($validator->validated());
+        }
+
+        ----------------------------------------------------
+        📌 3. AFFICHER LES ERREURS DANS BLADE
+        ----------------------------------------------------
+        @if($errors->any())
+            @foreach($errors->all() as $error)
+                <p style="color:red;">{{ $error }}</p>
+            @endforeach
+        @endif
+
+        ----------------------------------------------------
+        📌 4. MESSAGES PERSONNALISÉS
+        ----------------------------------------------------
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|min:3'
+        ], [
+            'title.required' => 'Le titre est obligatoire.',
+            'title.min'      => 'Minimum 3 caractères.'
+        ]);
+
+        ----------------------------------------------------
+        📌 5. PRINCIPALES RÈGLES DE VALIDATION
+        ----------------------------------------------------
+        📝 Les règles les plus courantes :
+
+        - required       → le champ est obligatoire
+        - min:n         → longueur minimum
+        - max:n         → longueur maximum
+        - email         → doit être un email valide
+        - numeric       → doit être un nombre
+        - integer       → doit être un entier
+        - boolean       → true/false
+        - date          → date valide
+        - url           → URL valide
+        - unique:table  → valeur unique dans une table
+        - confirmed     → nécessite un champ _confirmation
+        - nullable      → champ facultatif
+        - in:a,b,c      → doit être une valeur parmi la liste
+        - before:date   → doit être avant une date donnée
+        - after:date    → doit être après une date donnée
+
+        Exemple rapide :
+        [
+            'name' => 'required|min:2|max:50',
+            'email' => 'required|email|unique:users',
+            'age' => 'nullable|integer|min:10',
+        ] OU dans un tableau associatif : [
+                'name' => ['required', 'min:2', 'max:50'
+            ...]
+
+        ----------------------------------------------------
+        📌 6. RÉSUMÉ
+        ----------------------------------------------------
+        ✔ make() → crée une instance du validateur, a 3 paramètres (données, règles, messages optionnels)
+        ✔ Validator::make() → validation avancée 
+        ✔ errors() → récupérer les erreurs 
+        ✔ fails() → vérifier s'il y a des erreurs  
+        ✔ validated() → renvoie les données validées  
+        ✔ Très utile dans les formulaires complexes, API ou logique avancée
+
+    */
+
+
+        $validator = FacadesValidator::make([
+            'title' => 'azazazazaz'
+        ], [
+            'title' => 'required|min:6'
+        ]);
+
+        dd($validator->validated());
 
         /*
         ----------------------------------------------
