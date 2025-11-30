@@ -63,6 +63,9 @@ Route::prefix('/blog')->name('blog.')->group(function () {
     */
     Route::get('/', [BlogController::class, 'index'])->name('index');
 
+    Route::get('/new', [BlogController::class, 'create'])->name('create');
+    Route::post('/new', [BlogController::class, 'store'])->name('store'); //::post : Serve à recevoir les données du formulaire
+
 
     /*
     ----------------------------------------------

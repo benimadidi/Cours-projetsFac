@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Validator as FacadesValidator;
 use Illuminate\View\View;
+use Illuminate\Support\Str;
 use Nette\Utils\Paginator;
 
 use Spatie\LaravelIgnition\Exceptions\ViewException;
@@ -191,13 +192,13 @@ class BlogController extends Controller
     */
 
 
-        $validator = FacadesValidator::make([
-            'title' => 'azazazazaz'
-        ], [
-            'title' => 'required|min:6'
-        ]);
+        // $validator = FacadesValidator::make([
+        //     'title' => 'azazazazaz'
+        // ], [
+        //     'title' => 'required|min:6'
+        // ]);
 
-        dd($validator->validated());
+        // dd($validator->validated());
 
         /*
         ----------------------------------------------
@@ -229,7 +230,26 @@ class BlogController extends Controller
             ]);
     }
 
-    public function show(string $slug, string $id): RedirectResponse | Post
+    public  function create() : View 
+    {
+        return view('blog.create');
+    }
+
+    public function store (Request $request)
+    {
+        $post = Post::create([
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
+            'slug' => Str::slug($request->input('title'))
+        ]);
+        return redirect()->route('blog.show', [
+            'slug' => $post->slug,
+            'id' => $post->id
+        ])->with('success', 'Article créé avec succès !');
+
+    }
+
+    public function show(string $slug, string $id)
     {
         $post = Post::findorFail($id);
         if ($post->slug !== $slug) 
