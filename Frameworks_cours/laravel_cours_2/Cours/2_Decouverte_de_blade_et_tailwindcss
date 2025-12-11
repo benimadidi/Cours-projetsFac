@@ -148,8 +148,7 @@ Ensuite tu peux utiliser Tailwind dans n’importe quel template Blade.
 - @vite → inclure les assets
 - @php … @endphp → exécuter du PHP
 - @dump ou @dd → debug rapide
-- @dd → dump & die : arrête l’exécution
-@props → définir les props d’un composant (un tableau associatif)
+- @props → définir les props d’un composant (un tableau associatif)
 
 -----------------------------------------------------------
 📌 10. CE QU’IL FAUT ABSOLUMENT RETENIR

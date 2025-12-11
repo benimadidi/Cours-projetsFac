@@ -10,7 +10,7 @@
 
         <title>Site minimaliste</title>
 
-        <script src="https://cdn.tailwindcss.com"></script>
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     </head>
 
@@ -29,6 +29,8 @@
                     <x-link-item href="/" class="underline"  :active="Route::currentRouteName() === 'homepage' ? true : false">Homepage</x-link-item> <!-- mettre `:` signifie que la valeur est une expression PHP -->
                     
                     <x-link-item href="/projects" :active="Route::currentRouteName() === 'projects' ? true : false" >Projects</x-link-item>
+
+                    <x-link-item href="/recipes" :active="Route::currentRouteName() === 'recipes.index' ? true : false" >Recipes</x-link-item>
 
                 </ul>
 
