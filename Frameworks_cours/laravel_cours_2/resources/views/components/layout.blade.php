@@ -30,7 +30,7 @@
                     
                     <x-link-item href="/projects" :active="Route::currentRouteName() === 'projects' ? true : false" >Projects</x-link-item>
 
-                    <x-link-item href="/recipes" :active="Route::currentRouteName() === 'recipes.index' ? true : false" >Recipes</x-link-item>
+                    <x-link-item href="/recipes" :active="fnmatch('recipes.*', Route::currentRouteName()) ? true : false" >Recipes</x-link-item>
 
                 </ul>
 
