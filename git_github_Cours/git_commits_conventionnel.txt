@@ -1,0 +1,86 @@
+GIT COMMIT TIPS (Conventional Commits)
+===============================
+
+FORMAT GENERAL
+--------------
+type(scope): message court
+
+Exemple :
+feat(auth): ajout de la connexion utilisateur
+
+
+PREFIXES LES PLUS UTILISES
+-------------------------
+
+*feat*
+- Nouvelle fonctionnalité
+Exemple :
+feat(profile): ajout de la photo de profil
+
+*fix*
+- Correction de bug
+Exemple :
+fix(login): correction de l’erreur de session
+
+*docs*
+- Documentation uniquement
+Exemple :
+docs(readme): mise à jour des instructions
+
+*style*
+- Mise en forme (CSS, indentations, espaces, pas de logique)
+Exemple :
+style(css): ajustement du responsive navbar
+
+*refactor*
+- Réorganisation du code sans changer le comportement
+Exemple :
+refactor(user): simplification de updateProfile
+
+*perf*
+- Amélioration des performances
+Exemple :
+perf(query): optimisation des requêtes
+
+*test*
+- Ajout ou modification de tests
+Exemple :
+test(auth): ajout des tests de connexion
+
+*chore*
+- Tâches techniques (config, dépendances, scripts)
+Exemple :
+chore(git): ajout du fichier .gitignore
+
+
+LE SCOPE (OPTIONNEL MAIS PRO)
+----------------------------
+Le scope précise la partie du projet concernée.
+
+Exemples de scope :
+- auth
+- student
+- company
+- admin
+- db
+- ui
+
+Exemple :
+feat(student): ajout du formulaire de mise à jour du profil
+
+
+BONNES PRATIQUES
+----------------
+- Un commit = une seule idée
+- Message clair et court (≈ 50 caractères)
+- Utiliser l’impératif : add, fix, update
+- Éviter : "update", "fix bug", "changes"
+
+
+TIP AVANT COMMIT
+----------------
+Toujours vérifier :
+git status
+git diff
+
+Si trop de changements → faire plusieurs commits.
