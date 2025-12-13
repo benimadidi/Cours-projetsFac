@@ -1,27 +1,98 @@
 
+==============================================
+📘 LARAVEL – LE M DANS MVC (MODEL)
+==============================================
 
-Le M dans MVC
-=================
+1️⃣ MVC : architecture de Laravel
+----------------------------------------------
+Laravel utilise l’architecture MVC.
 
-Les models, c'est directmement lié au mvc, le mvc est l'architecture qui est utilisé par laravel.
-Parmi les termes mvc :ue
-                      on a : 
-                        m : model
-                        v : vue
-                        c : controller
+MVC signifie :
+    - 🧠 M → Model
+    - 👀 V → View
+    - 🎮 C → Controller
 
-Les models représentent les tables dans notre bdd.
+Chaque partie a un rôle précis :
+    - Le Model gère les données
+    - La View affiche les données
+    - Le Controller fait le lien entre les deux
 
-On y retrouve a l'interieur : 
-    Une classe qui représente cette table (Souvent le meme nom que le nom du fichier).
-        Dans cette classe on va avoir toutes les methodes qu'on veut utliser pour notre table.
-        NB : C'est bien de typer le retour de nos methodes
+----------------------------------------------
+2️⃣ Rôle des Models
+----------------------------------------------
+Les Models représentent directement les tables
+de la base de données.
 
-Et enfin on peut utiliser nos methodes au sein de notre application
+➡️ 1 Model = 1 table (en général)
 
+Exemples :
+    - User    → table users
+    - Post    → table posts
+    - Product → table products
 
-Petite astuce, dans notre vue, pour les liens, lorsqu'on a un recipes.index ou recipes.show, il peut enelver certains styles qu'on met lorsque oar exmeple quand on met en gras lorsqu'on est sur une route
-    On peut utiliser la fonction fnmatch et le * .
-        Ex : fnmatch('recipes.*', Route::currentRouteName()) ? true : false"
-        Ici, on compare si notre route actuelle correspond au nom de la route recipes.* (recipes.index ou recipes.show)    
-    
+----------------------------------------------
+3️⃣ Contenu d’un Model
+----------------------------------------------
+Un Model contient :
+
+🔹 Une classe
+    - Le nom de la classe correspond au fichier
+    - Le nom est généralement au singulier
+
+🔹 Des méthodes
+    - Ces méthodes permettent :
+        • de récupérer des données
+        • de filtrer des données
+        • de structurer la logique liée à la table
+
+💡 Bonne pratique :
+    - Toujours typer le retour des méthodes
+    - Le code est plus lisible et plus fiable
+
+----------------------------------------------
+4️⃣ Utilisation des Models
+----------------------------------------------
+Les méthodes définies dans un Model peuvent être
+utilisées partout dans l’application :
+    - Controllers
+    - Services
+    - Commandes
+    - etc.
+
+👉 Le Model centralise toute la logique liée aux données
+
+----------------------------------------------
+5️⃣ Astuce : gérer les styles actifs dans les vues
+----------------------------------------------
+Dans les vues, on a souvent des liens de navigation.
+
+Problème :
+    - Le style du lien actif peut disparaître
+      selon la route actuelle (.index, .show, etc.)
+
+Solution :
+    - Utiliser fnmatch() avec un wildcard (*)
+
+Exemple de logique :
+    fnmatch('nomroute.*', Route::currentRouteName())
+
+Explication :
+    - 'nomroute.*' correspond à :
+        • nomroute.index
+        • nomroute.show
+        • nomroute.edit
+        • etc.
+
+👉 Très utile pour :
+    - menus actifs
+    - liens en gras
+    - états visuels dynamiques
+
+----------------------------------------------
+✅ Résumé
+----------------------------------------------
+✔ Laravel utilise l’architecture MVC
+✔ Le Model représente une table de la base de données
+✔ Le Model contient la logique liée aux données
+✔ Les méthodes du Model sont réutilisables
+✔ fnmatch() permet de gérer les routes actives proprement
