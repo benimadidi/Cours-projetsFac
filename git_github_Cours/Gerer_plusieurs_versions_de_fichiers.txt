@@ -14,8 +14,8 @@ Pour versionner en local :
         git init : Initialise Git sur le dossier
 
     Ajout de fichiers dans git : 
-        git add . : Ajoute tous les fichiers, sauf les fichiers supprimés
-        git add <fichier>.txt : Ajoute le fichier
+        git add . : Ajoute tous les fichiers, sauf les fichiers supprimés et ceux mentionné dans .gitignore
+        git add <fichier>.txt : Ajoute d'un fichier spécifique
         git add --all * : Ajoute tous les fichiers visibles du dossier, même ceux supprimés, mais pas les fichiers cachés
         git add --all ou git add -A : Ajoute tous les changements dans le projet, même les fichiers cachés
 
@@ -24,7 +24,7 @@ Pour versionner en local :
     Metter a jour git :
         git commit -m "Message" : Met a jour Git avec un message
 
-        git commit -a -m "Message" : Ajoute tous les fichiers du dossier avec un message
+        git commit -am "Message" : Ajoute tous les fichiers du dossier avec un message
 
     Pour faire d l'analyse et de la recherche : 
         git log : Voir l'historique des versions
