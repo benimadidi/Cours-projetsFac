@@ -34,9 +34,8 @@ Route::view('/projects', 'projects')->name('projects');
 Route::get('/recipes', function () 
 {
 
-    $model = new Recipe();
+    $recipes = Recipe::all();
 
-    $recipes = $model->getAll();
 
     return view('recipes.index', compact('recipes'));
 
@@ -47,9 +46,8 @@ Route::get('/recipes', function ()
 Route::get('/recipes/{id}', function (int $id) 
 {
 
-    $model = new Recipe();
+    $recipe = Recipe::find($id);
 
-    $recipe = $model->retrieve($id);
 
     return view('recipes.show', compact('recipe'));
 

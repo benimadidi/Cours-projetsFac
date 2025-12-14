@@ -3,9 +3,9 @@
 
     <h1>My recipes</h1>
 
-    @foreach ($recipes as $key => $recipe)
+    @foreach ($recipes as $recipe)
 
-        <p><a href="{{ route('recipes.show', $key) }}" class="underline text-blue-500 hover:text-blue-800 ">{{ $recipe['title'] }}</a></p>
+        <p><a href="{{ route('recipes.show', $recipe->id) }}" class="underline text-blue-500 hover:text-blue-800 ">{{ $recipe->title }}</a></p>
         
     @endforeach
 

@@ -12,6 +12,12 @@ feat(auth): ajout de la connexion utilisateur
 PREFIXES LES PLUS UTILISES
 -------------------------
 
+*chore*
+- Tâches techniques (config, dépendances, scripts), qui n'ajoute pas forcement de fonctionnalité visible.
+
+*develop*
+- En développement
+
 *feat*
 - Nouvelle fonctionnalité
 Exemple :
