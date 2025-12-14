@@ -1,0 +1,78 @@
+COURS – TRAVAILLER EN GROUPE AVEC GIT ET GITHUB
+=============================================
+
+1. INTRODUCTION
+---------------
+Git est un système de contrôle de version.
+Il permet de suivre l’évolution du code, travailler à plusieurs
+et revenir en arrière en cas d’erreur.
+
+GitHub est une plateforme en ligne qui héberge les dépôts Git
+et facilite le travail collaboratif (branches, pull requests, revues).
+
+--------------------------------------------------
+
+2. CONCEPTS DE BASE
+------------------
+- Repository (repo) : dossier du projet versionné
+- Commit : sauvegarde d’un état du projet
+- Branche : ligne de développement parallèle
+- Merge : fusion de branches
+- Pull / Push :
+  - pull  : récupérer les changements distants
+  - push  : envoyer ses changements sur GitHub
+
+--------------------------------------------------
+
+3. ORGANISATION EN EQUIPE (RECOMMANDEE)
+--------------------------------------
+Branches principales :
+- main    : version stable / production
+- develop : version en cours de développement
+
+Branches de travail :
+- feature/nom-fonctionnalite
+  ex: feature/homepage
+      feature/contact-form
+
+Règle importante :
+On ne code JAMAIS directement sur main.
+
+--------------------------------------------------
+
+4. WORKFLOW DE TRAVAIL EN GROUPE
+-------------------------------
+
+1. Cloner le projet
+   git clone <url-du-repo>
+   git checkout develop
+
+2. Créer sa branche
+   git checkout -b feature/ma-fonctionnalite
+
+3. Travailler et sauvegarder
+   git add .
+   git commit -m "feat: description claire"
+
+4. Envoyer la branche
+   git push origin feature/ma-fonctionnalite
+
+5. Créer une Pull Request (PR) sur GitHub
+   - de feature/* vers develop
+   - après validation : merge
+
+
+--------------------------------------------------
+
+5. BONNES PRATIQUES
+------------------
+- Une fonctionnalité = une branche
+- Commits petits et clairs
+- Toujours faire :
+  git pull origin develop
+  avant de commencer à coder
+- Communication entre les membres
+- Ne jamais casser la branche main
+
+--------------------------------------------------
+
