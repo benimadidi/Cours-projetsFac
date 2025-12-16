@@ -81,6 +81,9 @@ de structure.
 - php artisan migrate:rollback
     → Annule la dernière migration exécutée
 
+
+    - php artisan migrate:rollback --step=1
+        → Annule une seule migration (la dernière)
 ----------------------------------------------
 7️⃣ Créer une migration
 ----------------------------------------------

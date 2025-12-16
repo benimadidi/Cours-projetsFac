@@ -8,17 +8,6 @@ use Illuminate\Support\Facades\Route;
 
 
 
-$recipes = [
-
-    1 => ['title' => 'Spaghetti Carbonara', 'ingredients' => ['Pasta', 'Eggs', 'Cheese', 'Bacon']],
-
-    2 => ['title' => 'Chicken Curry', 'ingredients' => ['Chicken', 'Coconut Milk', 'Curry Powder']],
-
-    3 => ['title' => 'Vegetable Stir Fry', 'ingredients' => ['Broccoli', 'Carrots', 'Say Sauce', 'Garlic']]
-
-];
-
-
 
 Route::get('/', function () 
 {
