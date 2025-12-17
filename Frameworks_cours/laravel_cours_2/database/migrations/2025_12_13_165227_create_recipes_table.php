@@ -17,7 +17,6 @@ return new class extends Migration
 
             $table->string('title');
 
-            $table->json('ingredients');
 
             $table->timestamps();
         });
@@ -25,11 +24,11 @@ return new class extends Migration
 
         $recipes = [
 
-            ['title' => 'Spaghetti Carbonara', 'ingredients' => ['Pasta', 'Eggs', 'Cheese', 'Bacon']],
+            ['title' => 'Spaghetti Carbonara'],
 
-            ['title' => 'Chicken Curry', 'ingredients' => ['Chicken', 'Coconut Milk', 'Curry Powder']],
+            ['title' => 'Chicken Curry'],
 
-            ['title' => 'Vegetable Stir Fry', 'ingredients' => ['Broccoli', 'Carrots', 'Say Sauce', 'Garlic']]
+            ['title' => 'Vegetable Stir Fry']
 
         ];
 
@@ -37,9 +36,7 @@ return new class extends Migration
 
             DB::table('recipes')->insert([
 
-                    'title' => $recipe['title'],
-
-                    'ingredients' => json_encode($recipe['ingredients']),
+                    'title' => $recipe['title']
 
                 ]);
 

@@ -95,6 +95,9 @@ Pour créer une nouvelle migration :
     - le nom du fichier
     - la structure de base (up / down)
 
+- php artisan db:wipe
+    → Supprime toutes les tables de la BDD
+
 ----------------------------------------------
 8️⃣ Astuce : la façade DB
 ----------------------------------------------

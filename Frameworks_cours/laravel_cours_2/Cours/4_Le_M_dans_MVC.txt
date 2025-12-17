@@ -52,6 +52,11 @@ Un Model contient :
 ----------------------------------------------
 4️⃣ Utilisation des Models
 ----------------------------------------------
+
+- Créer un Model avec la commande Artisan :
+    - php artisan make:model NomModel -m 
+        -m signifie "migration" (donc, il créera une migration)
+
 Les méthodes définies dans un Model peuvent être
 utilisées partout dans l’application :
     - Controllers

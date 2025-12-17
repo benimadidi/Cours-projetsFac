@@ -5,7 +5,7 @@
 
     @foreach ($recipe->ingredients as $ingredient)
 
-        <p class="text-zinc-500">{{ $ingredient }}</p>
+        <p class="text-zinc-500">{{ $ingredient->name }}</p>
         
     @endforeach
 
