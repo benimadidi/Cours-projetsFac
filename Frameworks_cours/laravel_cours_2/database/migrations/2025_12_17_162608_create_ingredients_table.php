@@ -21,41 +21,6 @@ return new class extends Migration
             $table->timestamps();
         });
 
-
-        $ingredients = [
-            
-            1 => ['name' => 'Pasta'],
-
-            2 => ['name' => 'Eggs'],
-
-            3 => ['name' => 'Cheese'],
-
-            4 => ['name' => 'Bacon'],
-
-            5 => ['name' => 'Chicken'],
-
-            6 => ['name' => 'Coconut Milk'],
-
-            7 => ['name' => 'Curry Powder'],
-
-            8 => ['name' => 'Broccoli'],
-
-            9 => ['name' => 'Carrots'],
-
-            10 => ['name' => 'Soy Sauce'],
-
-            11 => ['name' => 'Garlic']
-        ];
-
-        foreach ($ingredients as $ingredient) {
-
-            DB::table('ingredients')->insert([
-
-                    'name' => $ingredient['name']
-
-                ]);
-
-            };
     }
 
     /**

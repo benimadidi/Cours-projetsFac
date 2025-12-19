@@ -21,27 +21,6 @@ return new class extends Migration
             $table->timestamps();
         });
 
-
-        $recipes = [
-
-            ['title' => 'Spaghetti Carbonara'],
-
-            ['title' => 'Chicken Curry'],
-
-            ['title' => 'Vegetable Stir Fry']
-
-        ];
-
-        foreach ($recipes as $recipe) {
-
-            DB::table('recipes')->insert([
-
-                    'title' => $recipe['title']
-
-                ]);
-
-            };
-
     }
 
     /**
