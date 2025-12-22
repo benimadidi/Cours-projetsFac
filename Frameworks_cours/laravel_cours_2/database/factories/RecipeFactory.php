@@ -27,4 +27,13 @@ class RecipeFactory extends Factory
 
         ];
     }
+
+    public function withUser(): static
+    {
+
+        return $this->state(fn () => [
+            'user_id' => User::factory(),
+        ]);
+
+    }
 }

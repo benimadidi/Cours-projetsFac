@@ -66,6 +66,10 @@ Exemple logique d’une factory :
 👉 fake() permet d’accéder à Faker
 pour générer des données réalistes.
 
+Dans le model, ajouter : 
+
+    use HasFactory;
+
 ----------------------------------------------
 6️⃣ Utilisation d’une Factory
 ----------------------------------------------
